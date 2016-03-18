@@ -1,4 +1,4 @@
-$( "#biseccion" ).click(function() {
+$( "#puntofijo" ).click(function() {
   var bla = $('#funcion1').val()
   var intmin = $('#intmin').val()
   var intmax = $('#intmax').val()
