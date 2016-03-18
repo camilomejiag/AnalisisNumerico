@@ -43,7 +43,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    viewvi
+    <a href="../index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">AN</span>
       <!-- logo for regular state and mobile devices -->
@@ -118,12 +118,6 @@
           </a>
         </li>
 
-
-        <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -146,22 +140,29 @@
 
     <!-- Main content -->
 
-    <div class="col-xs-6 push-2-right input-group margin-top">
+    <div class="col-xs-4 input-group margin-top">
   <span class="input-group-addon" id="basic-addon1">Funcion</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" id="funcion" placeholder="Funcion" aria-describedby="basic-addon1">
 </div>
 
-<div class="col-xs-6 push-2-right input-group margin-top">
+<div class="col-xs-4 input-group margin-top">
 <span class="input-group-addon" id="basic-addon1">Intervalo minimo</span>
-<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+<input type="text" class="form-control" placeholder="Valor Minimo" aria-describedby="basic-addon1">
 </div>
 
-<div class="col-xs-6 push-2-right input-group margin-top">
+<div class="col-xs-4 input-group margin-top">
 <span class="input-group-addon" id="basic-addon1">Intervalo Maximo</span>
-<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+<input type="text" class="form-control" placeholder="Valor Maximo" aria-describedby="basic-addon1">
 </div>
 
+<div class="col-xs-2 margin-top">
+<button type="button" id="biseccion" class="btn btn-success">Calcular</button>
+</div>
     <!-- /.content -->
+
+    <div class="append">
+
+    </div>
   </div>
 
 
@@ -177,6 +178,7 @@
 <script src="../node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>
 <script src="../node_modules/jquery.inputmask/dist/inputmask/inputmask.extensions.js"></script>
 <script src="../node_modules/jquery.inputmask/dist/inputmask/inputmask.date.extensions.js"></script>
+<script src="../js/biseccion.js"></script>
 <!-- date-range-picker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
 <script src="../node_modules/daterangepicker/daterangepicker.js"></script>
