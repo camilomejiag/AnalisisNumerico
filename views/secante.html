@@ -117,6 +117,13 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
         </li>
+        <li class="treeview">
+          <a href="raices.html">
+            <i class="fa fa-code"></i>
+            <span>Raices Multiples</span>
+          <i class="fa fa-angle-left pull-right"></i>
+          </a>
+        </li>
 
       </ul>
     </section>
@@ -139,26 +146,58 @@
     </section>
 
     <!-- Main content -->
+    <div class="col-lg-6 col-xs-6">
+      <section>
+        <h4>
+          Secante
+        </h4>
+      </section>
     <div class="col-xs-offset-1 col-lg-offset-0">
-      <div class="col-lg-4 col-xs-9 input-group margin-top">
+      <div class="col-lg-10 col-xs-11 input-group margin-top">
         <span class="input-group-addon" id="basic-addon1">Funcion</span>
         <input type="text" class="form-control" id="funcion1" placeholder="Funcion" aria-describedby="basic-addon1"></input>
       </div>
 
-      <div class="col-lg-4 col-xs-9 input-group margin-top">
+      <div class="col-lg-10 col-xs-11 input-group margin-top">
         <span class="input-group-addon" id="basic-addon1">Intervalo minimo</span>
         <input type="text" class="form-control" id="intmin" placeholder="Valor Minimo" aria-describedby="basic-addon1">
       </div>
 
-      <div class="col-lg-4 col-xs-9 input-group margin-top">
+      <div class="col-lg-10 col-xs-11 input-group margin-top">
         <span class="input-group-addon" id="basic-addon1">Intervalo Maximo</span>
         <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1">
       </div>
       </div>
 
-      <div class="col-xs-12 col-lg-12 margin-top">
-        <button type="button" id="biseccion" class="btn btn-success col-lg-offset-2 col-xs-offset-4">Calcular</button>
-      </div>
+    </div>
+
+    <div class="col-lg-6 col-xs-6">
+      <section>
+        <h4>
+          Criterios de parada
+        </h4>
+      </section>
+      <div class="col-xs-offset-1 col-lg-offset-0">
+        <div class="col-lg-10 col-xs-11 input-group margin-top">
+          <span class="input-group-addon" id="basic-addon1">Numero Iteraciones</span>
+          <input type="text" class="form-control" id="iteraciones" placeholder="Numero Iteracion" aria-describedby="basic-addon1"></input>
+        </div>
+
+        <div class="col-lg-10 col-xs-11 input-group margin-top">
+          <span class="input-group-addon" id="basic-addon1">Error Absoluto</span>
+          <input type="text" class="form-control" id="delta" placeholder="Error Absoluto" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="col-lg-10 col-xs-11 input-group margin-top">
+          <span class="input-group-addon" id="basic-addon1">Tolerancia</span>
+          <input type="text" class="form-control" id="tolerancia" placeholder="Tolerancia" aria-describedby="basic-addon1">
+        </div>
+        </div>
+    </div>
+
+    <div class="col-xs-offset-5 col-lg-offset-5 ">
+      <button type="button" id="secante" class="btn btn-success calcular">Calcular</button>
+    </div>
     <!-- /.content -->
 
     <div class="append"></div>
@@ -197,6 +236,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../js/demo.js"></script>
 <!-- Page script -->
+<script src="../node_modules/mathjs/dist/math.js"></script>
 <script>
   $(function () {
     //Initialize Select2 Elements

@@ -1,5 +1,6 @@
-$( "#biseccion" ).click(function() {
+$( "#raices" ).click(function() {
   var bla = $('#funcion1').val();
+  var derivada = $('#derivada').val();
   var intmin = $('#intmin').val();
   var intmax = $('#intmax').val();
   var iteraciones = $('#iteraciones').val();
@@ -22,6 +23,7 @@ $( "#biseccion" ).click(function() {
 } else if (tolerancia == "") {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
+  //Aca se haran las operaciones para encontrar las raices multiples
   $( ".append" ).append(x);
 }
 });
