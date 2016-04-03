@@ -23,6 +23,46 @@ $( "#secante" ).click(function() {
 } else if (tolerancia == "") {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
+<<<<<<< HEAD
+  var ima = parseFloat(Math.min(intmin + (Math.random() * (intmax - intmin)),intmax));
+  var imi = parseFloat(Math.min(intmin + (Math.random() * (intmax - intmin)),intmax));
+  var a = evaluar(imi);
+  var b = evaluar(ima);
+  var x = ima - ((b*(ima-imi))/(b-a));
+ for(var i=1;i<=iteraciones;i++){
+   var xF = evaluar(x);
+   if(xF*a<0){
+     ima = x;
+     b = evaluar(ima);
+     x = ima - ((b-(ima-imi))/(b-a));
+   }else if(xF*b<0){
+     imi = x;
+     a = evaluar(imi);
+     x = imi - ((b-(ima-imi))/(b-a));
+   }else {
+     alert("La funcion no es valida con este metodo");
+     break;
+   }
   $( ".append" ).append(x);
 }
 });
+
+function evaluar(evaluar){
+    var funcion = $('#funcion1').val();
+  var ev =  parseFloat(evaluar);
+  var scope = {
+      x: ev,
+      y: ev,
+      z: ev,
+      w: ev
+  };
+  var node = math.parse(funcion, scope);
+  var code = node.compile();
+  var res = code.eval(scope);
+  return res;
+}
+=======
+  $( ".append" ).append(x);
+}
+});
+>>>>>>> origin/master
