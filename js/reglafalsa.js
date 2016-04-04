@@ -1,27 +1,16 @@
 $( "#reglafalsa" ).click(function() {
-<<<<<<< HEAD
+
   var funcion = $('#funcion1').val();
-=======
-  var bla = $('#funcion1').val();
->>>>>>> origin/master
+
   var derivada = $('#derivada').val();
   var intmin = $('#intmin').val();
   var intmax = $('#intmax').val();
   var iteraciones = $('#iteraciones').val();
   var delta = $('#delta').val();
   var tolerancia = $('#tolerancia').val();
-<<<<<<< HEAD
-  var x = "<table class='table table-bordered'><thead><tr><th>Firstname</th><th>Lastname</th><th>Email</th></tr></thead><tbody><tr><td>John</td>";
-    x += "<td>Doe</td><td>john@example.com</td></tr><tr><td>Mary</td><td>Moe</td><td>mary@example.com</td></tr><tr><td>July</td>";
-    x += "<td>Dooley</td><td>july@example.com</td></tr></tbody></table>;"
+
   if (funcion == "") {
-=======
-  console.log(bla);
-  var x = "<table class='table table-bordered'><thead><tr><th>Firstname</th><th>Lastname</th><th>Email</th></tr></thead><tbody><tr><td>John</td>";
-    x += "<td>Doe</td><td>john@example.com</td></tr><tr><td>Mary</td><td>Moe</td><td>mary@example.com</td></tr><tr><td>July</td>";
-    x += "<td>Dooley</td><td>july@example.com</td></tr></tbody></table>;"
-  if (bla == "") {
->>>>>>> origin/master
+
   alert("No ingreso nada en el campo funcion. Vuelta a intentar.");
 } else if (intmin == "") {
   alert("No ingreso nada en el campo Intervalo Minimo. Vuelta a intentar.");
@@ -34,14 +23,22 @@ $( "#reglafalsa" ).click(function() {
 } else if (tolerancia == "") {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
-<<<<<<< HEAD
+
+   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th></tr></thead><tbody class='append'></tbody></table>");
+
   var ima = parseFloat(intmax);
   var imi = parseFloat(intmin);
   var a = evaluar(imi);
   var b = evaluar(ima);
+  var xF;
   var x = ima - ((b*(ima-imi))/(b-a));
  for(var i=1;i<=iteraciones;i++){
-   var xF = evaluar(x);
+   var xff = xF;
+   xF = evaluar(x);
+   if(Math.abs(xF-xff)<delta){
+     break;
+   }
+   var x2=x;
    if(xF*a<0){
      ima = x;
      b = evaluar(ima);
@@ -54,9 +51,12 @@ $( "#reglafalsa" ).click(function() {
      alert("La funcion no es valida con este metodo");
      break;
    }
-  $( ".append" ).append(x +"<br>");
+   if(Math.abs(x-x2)<tolerancia){
+     break;
+   }
+   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td></tr>");
 }
-  $( ".append" ).append("------------------------------<br>");
+
 }
 });
 
@@ -74,8 +74,3 @@ function evaluar(evaluar){
   var res = code.eval(scope);
   return res;
 }
-=======
-  $( ".append" ).append(x);
-}
-});
->>>>>>> origin/master
