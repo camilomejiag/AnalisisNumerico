@@ -7,9 +7,6 @@ $( "#secante" ).click(function() {
   var delta = $('#delta').val();
   var tolerancia = $('#tolerancia').val();
 
-  var x = "<table class='table table-bordered'><thead><tr><th>Firstname</th><th>Lastname</th><th>Email</th></tr></thead><tbody><tr><td>John</td>";
-    x += "<td>Doe</td><td>john@example.com</td></tr><tr><td>Mary</td><td>Moe</td><td>mary@example.com</td></tr><tr><td>July</td>";
-    x += "<td>Dooley</td><td>july@example.com</td></tr></tbody></table>;"
   if (funcion == "") {
   alert("No ingreso nada en el campo funcion. Vuelta a intentar.");
 } else if (intmin == "") {
@@ -24,36 +21,37 @@ $( "#secante" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th></tr></thead><tbody class='append'></tbody></table>");
+   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th><th>Tolerancia</th></tr></thead><tbody class='append'></tbody></table>");
 
-  var ima = parseFloat(Math.min(intmin + (Math.random() * (intmax - intmin)),intmax));
-  var imi = parseFloat(Math.min(intmin + (Math.random() * (intmax - intmin)),intmax));
+  var ima = parseFloat(intmax);
+  var imi = parseFloat(intmin);
   var a = evaluar(imi);
   var b = evaluar(ima);
   var x = ima - ((b*(ima-imi))/(b-a));
+
  for(var i=1;i<=iteraciones;i++){
    var xff = xF;
    var xF = evaluar(x);
-   if(Math.abs(xF-xff)<delta){
+   var errorr = xF - xff;
+   if(Math.abs(errorr)<delta){
      break;
    }
    var x2 = x;
-   if(xF*a<0){
+   if(x+ima > x+imi){
      ima = x;
      b = evaluar(ima);
-     x = ima - ((b-(ima-imi))/(b-a));
-   }else if(xF*b<0){
+     x = ima - ((b*(ima-imi))/(b-a));
+   }else {
      imi = x;
      a = evaluar(imi);
-     x = imi - ((b-(ima-imi))/(b-a));
-   }else {
-     alert("La funcion no es valida con este metodo");
+     x = imi - ((b*(ima-imi))/(b-a));
+   }
+   var cambio = x2-x;
+   if(Math.abs(tolerancia)<delta){
      break;
    }
-   if(Math.abs(x2-x)<delta){
-     break;
-   }
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td></tr>");
+    $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td><td>" + errorr + "</td><td>"+ cambio +"</td></tr>");
+ }
 }
 });
 

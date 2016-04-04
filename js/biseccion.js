@@ -26,36 +26,37 @@ $( "#biseccion" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th></tr></thead><tbody class='append'></tbody></table>");
+   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th><th>Tolerancia</th></tr></thead><tbody class='append'></tbody></table>");
 
   var ima = parseFloat(intmax);
   var imi = parseFloat(intmin);
   var x = ( ima + imi)/2;
-  var a = evaluar(imi);
-  var b = evaluar(ima);
+  var a;
+  var b;
   var xF;
    $( ".append" ).append(x + "<br>");
  for(var i=1;i<=iteraciones ;i++){
    var xff = xF;
+    a = evaluar(imi);
+    b = evaluar(ima);
     xF = evaluar(x);
-   if(Math.abs(xF-xff)<delta){
+    var errorr = xF - xff;
+   if(Math.abs(errorr)<delta){
      break;
    }
    var x2 =x;
    if(xF*a<0){
-     b = x;
-     x= (a+b)/2;
+     ima = x;
+     x= (imi+ima)/2;
    }else if(xF*b<0){
-     a = x;
-     x= (a+b)/2;
-   //}else {
-    // alert("La funcion no es valida con este metodo");
-    // break;
+     imi = x;
+     x= (imi+ima)/2;
    }
-   if(Math.abs(x-x2)<tolerancia){
+   var tolerancia = x-x2;
+   if(Math.abs(tolerancia)<tolerancia){
      break;
    }
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td></tr>");
+   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td><td>" + errorr + "</td><td>"+ tolerancia +"</td></tr>");
  }
 }
 });

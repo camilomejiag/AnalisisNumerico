@@ -25,14 +25,15 @@ $( "#puntofijo" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th></tr></thead><tbody class='append'></tbody></table>");
+    $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th><th>Tolerancia</th></tr></thead><tbody class='append'></tbody></table>");
 
   var x = parseFloat(Math.min(parseFloat(intmin) + (Math.random() * (parseFloat(intmax) - parseFloat(intmin))),parseFloat(intmax)));
 for(var i=1;i<=iteraciones;i++){
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td></tr>");
+   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ evaluar(x) +"</td><td>" + errorr + "</td><td>"+ errorr +"</td></tr>");
   var x2 = x;
   x = evaluar(x);
-  if(Math.abs(x-x2)<tolerancia){
+  var errorr = x-x2;
+  if(Math.abs(errorr)<tolerancia){
     break;
   }
 }

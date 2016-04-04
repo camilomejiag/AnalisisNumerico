@@ -24,29 +24,33 @@ $( "#newton" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th></tr></thead><tbody class='append'></tbody></table>");
+    $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th><th>Tolerancia</th></tr></thead><tbody class='append'></tbody></table>");
 
-  var x = parseFloat(Math.min(intmin + (Math.random() * (intmax - intmin)),intmax));
+
+  var x = parseFloat(Math.min(parseFloat(intmin) + (Math.random() * (parseFloat(intmax) - parseFloat(intmin))),parseFloat(intmax)));
   var fa;
   var fb;
 for(var i=1;i<=iteraciones;i++){
   var faf = fa;
   fa = evaluar(x,funcion);
-  if(Math.abs(fa-faf)<delta){
+  var errorr = fa - faf;
+  if(Math.abs(errorr)<delta){
     break;
   }
-  fb = evaluar(x,deriavada);
+  fb = evaluar(x,derivada);
   var x2 = x;
   x = x-(fa/fb);
-  if(Math.abs(x-x2)<tolerancia){
+  var cambio = x-x2;
+  if(Math.abs(cambio)<tolerancia){
     break;
   }
+   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ fa +"</td><td>" + errorr + "</td><td>"+ cambio +"</td></tr>");
 }
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td></tr>");
+
 }
 });
 
-function evaluar(evaluar,fun){
+function evaluar(evaluar,funcion){
   var ev =  parseFloat(evaluar);
   var scope = {
       x: ev,
@@ -54,7 +58,7 @@ function evaluar(evaluar,fun){
       z: ev,
       w: ev
   };
-  var node = math.parse(funcion, fun);
+  var node = math.parse(funcion, scope);
   var code = node.compile();
   var res = code.eval(scope);
   return res;
