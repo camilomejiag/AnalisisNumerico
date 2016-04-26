@@ -1,8 +1,5 @@
 $( "#biseccion" ).click(function() {
 
-
-
-
   var funcion = $('#funcion1').val();
 
   var intmin = $('#intmin').val();
@@ -26,7 +23,7 @@ $( "#biseccion" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th><th>Tolerancia</th></tr></thead><tbody class='append'></tbody></table>");
+   $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
 
   var ima = parseFloat(intmax);
   var imi = parseFloat(intmin);
@@ -56,7 +53,7 @@ $( "#biseccion" ).click(function() {
    if(Math.abs(tolerancia)<tolerancia){
      break;
    }
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td><td>" + errorr + "</td><td>"+ tolerancia +"</td></tr>");
+   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td><td>" + errorr + "</td></tr>");
  }
 }
 });
@@ -75,3 +72,10 @@ function evaluar(evaluar){
   var res = code.eval(scope);
   return res;
 }
+
+var size = window.getComputedStyle(document.input1,':after').getPropertyValue('content');
+var size = window.getComputedStyle(document.input2,':after').getPropertyValue('content');
+var size = window.getComputedStyle(document.input3,':after').getPropertyValue('content');
+var size = window.getComputedStyle(document.input4,':after').getPropertyValue('content');
+var size = window.getComputedStyle(document.input5,':after').getPropertyValue('content');
+var size = window.getComputedStyle(document.input6,':after').getPropertyValue('content');

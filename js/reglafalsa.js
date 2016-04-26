@@ -24,7 +24,7 @@ $( "#reglafalsa" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-    $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th><th>Tolerancia</th></tr></thead><tbody class='append'></tbody></table>");
+    $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
 
   var ima = parseFloat(intmax);
   var imi = parseFloat(intmin);
@@ -56,7 +56,7 @@ $( "#reglafalsa" ).click(function() {
    if(Math.abs(cambio)<tolerancia){
      break;
    }
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td><td>" + errorr + "</td><td>"+ cambio +"</td></tr>");
+   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ xF +"</td><td>" + errorr + "</td></tr>");
 }
 
 }
