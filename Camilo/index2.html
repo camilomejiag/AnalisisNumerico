@@ -88,7 +88,7 @@ var oli = "";
 
   for (var i = 0; i < tamano; i++) {
     for (var j = 0; j < tamano; j++) {
-      oli += '  <input type="text" id="mat' + i + '' + j +'" value=' + j +'">';
+      oli += '<input type="text" id="mat' + i + '' + j +'" value="' + j +'">';
     }
     oli += '<input class="vectb" type="text" id="b' + i + '"><br>';
   }
@@ -149,11 +149,15 @@ function Resolver() {
   L = M(parseInt(tamano));
   b = M(parseInt(tamano), 1);
 
-
-
-  for (var i = 1; i <= tamano; i++) {
-    for (var j = 1; j <= tamano; j++) {
-      A.set(i, j, parseInt(document.getElementById('mat' + (i-1) + '' + (j-1)).value));
+var matriz = parseInt(document.getElementById('mat00').value);
+var matrizU = parseInt(document.getElementById('L00').value);
+var matrizL = parseInt(document.getElementById('U00').value);
+var bb = parseInt(document.getElementById('b0').value);
+  for (var i = 1; i < tamano; i++) {
+    for (var j = 1; j < tamano; j++) {
+      matriz += ", " + parseInt(document.getElementById('mat' + (i) + '' + (j)).value);
+      matrizU += ", " + parseInt(document.getElementById('U' + (i) + '' + (j)).value);
+      matrizL += ", " + parseInt(document.getElementById('L' + (i) + '' + (j)).value);
 
       //U.set(i,j,parseInt(document.getElementById('U' + (i-1) + '' + (j-1)).value));
 
@@ -161,27 +165,31 @@ function Resolver() {
 
 
     }
-    b.set(i,1,parseInt(document.getElementById('b' + (i-1)).value))
+    bb +=  ", " + parseInt(document.getElementById('b' + (i)).value);
   }
 
-  y=M(parseInt(tamano), b);
-  console.log(y);
+  A = M([matriz]);
+  y = M([bb]);
+  LU = m4th.lu(A);
+  x = LU.solve(y);
+  console.log(x);
 
-/*
+  /*
+  var A, y, LU, x, Ainv;
+  // create some matrices:
+  A = M([matriz]);
+
   y = M(3, [
-      x1,
-    x2,
-     x3
+      8,
+    -11,
+     -3
   ]);
-  */
 
-      // LU decompose matrix A
-      LU = m4th.lu(A); // node.js: require('m4th/lu')(A);
-      // calculate solution for: y = A*x
-      x = LU.solve(y);
-      // invert matrix A
-      Ainv = LU.getInverse();
-      console.log(x);
+  // LU decompose matrix A
+  LU = m4th.lu(A); // node.js: require('m4th/lu')(A);
+  // calculate solution for: y = A*x
+  x = LU.solve(y);
+  */
 
 }
 
