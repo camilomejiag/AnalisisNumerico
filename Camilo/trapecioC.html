@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>oli</title>
+        <script src="../node_modules/mathjs/dist/math.js"></script>
+        <script src="../js/fraction.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+        <div>Trapecio</div>
+        <div>
+          Ingrese numero de puntos
+          <input id="numerop"></input>
+          <button onclick="puntos()">Ejectutar</button><br>
+          <div id="puntos"></div>
+
+
+
+
+            <script>
+
+            function puntos() {
+              var numerop = document.getElementById("numerop").value;
+              $("#puntos").empty();
+              var oli = "";
+              for (var i = 0; i < numerop; i++) {
+                oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
+              }
+              oli += "H<br><input id='h'><br><button onclick='equaciones()'>Ejectutar</button>";
+              $( "#puntos" ).append(oli);
+            }
+
+            function equaciones() {
+            var numerop = document.getElementById("numerop").value;
+            var y0 = parseInt(document.getElementById("y1").value);
+            var yn = parseInt(document.getElementById("y" + numerop).value);
+            var h = parseInt(document.getElementById("h").value);
+            var x = [];
+            var y = [];
+            var yi = 0;
+            for (var i = 1; i < numerop-1; i++) {
+              x[i-1] = parseInt(document.getElementById("x" + (i+1)).value);
+              y[i-1] = parseInt(document.getElementById("y" + (i+1)).value);
+              yi += parseInt(y[i-1]);
+            }
+
+            var area = h/2 * (y0 + 2*yi + yn);
+
+
+
+            console.log("El area bajo las rectas de los puntos es: " + area);
+            }
+
+            </script>
+        </div>
+
+    </body>
+</html>
