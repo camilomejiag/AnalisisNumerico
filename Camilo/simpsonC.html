@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>oli</title>
+        <script src="../node_modules/mathjs/dist/math.js"></script>
+        <script src="../js/fraction.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+        <div>Simpson Compuesto</div>
+        <div>
+          Ingrese numero de puntos 
+          (impares)
+          <input id="numerop"></input>
+          <button onclick="puntos()">Ejectutar</button><br>
+          <div id="puntos"></div>
+
+
+
+
+            <script>
+
+            function puntos() {
+              var numerop = document.getElementById("numerop").value;
+              $("#puntos").empty();
+              var oli = "";
+              if (numerop <= 4) {
+                alert("El numero debe ser impar y mayor que 3.");
+              } else if ((numerop % 2) == 0) {
+                alert("Ingrese un numero impar de puntos.");
+              } else {
+                for (var i = 0; i < numerop; i++) {
+                  oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
+                }
+                oli += "H<br><input id='h'><br><button onclick='equaciones()'>Ejectutar</button>";
+                $( "#puntos" ).append(oli);
+              }
+            }
+
+            function equaciones() {
+            var numerop = document.getElementById("numerop").value;
+            var y0 = parseInt(document.getElementById("y1").value);
+            var yn = parseInt(document.getElementById("y" + numerop).value);
+            var h = parseInt(document.getElementById("h").value);
+            var y = [];
+            var yi1 = 0;
+            var yi2 = 0;
+            for (var i = 0; i <= (numerop-2)/2; i++) {
+              y[i-1] = parseInt(document.getElementById("y" + (i+1)).value);
+              if (i % 2 != 0) {
+                yi1 += parseInt(y[i]);
+              } else {
+                yi2 += parseInt(y[i+1]);
+              }
+            }
+
+            var area = h/3 * (y0 + 4*yi1 + 2*yi2 + yn);
+
+
+
+            console.log("El area bajo las rectas de los puntos es: " + area);
+            }
+
+            </script>
+        </div>
+
+    </body>
+</html>
