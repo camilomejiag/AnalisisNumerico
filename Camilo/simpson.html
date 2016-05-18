@@ -14,8 +14,8 @@ and open the template in the editor.
 
     </head>
     <body>
-
-        <div>Simpson</div>
+<a href="../index.html">Home</a>
+        <div>Simpson 1/3</div>
         <div>
           Punto 1<br>
           <input type="text" name="name" id="x1">
@@ -25,21 +25,20 @@ and open the template in the editor.
           <input type="text" name="name" id="y2">
           <br>Punto 3<br>
           <input type="text" name="name" id="x3">
-          <input type="text" name="name" id="y3">
-          <br>H<br><input id='h'>
+          <input type="text" name="name" id="y3"><br>
           <button onclick="equaciones()">Ejectutar</button>
 
 
             <script>
 
 function equaciones() {
-            var x1 = parseInt(document.getElementById("x1").value);
-            var y1 = parseInt(document.getElementById("y1").value);
-            var x2 = parseInt(document.getElementById("x2").value);
-            var y2 = parseInt(document.getElementById("y2").value);
-            var x3 = parseInt(document.getElementById("x3").value);
-            var y3 = parseInt(document.getElementById("y3").value);
-            var h = parseInt(document.getElementById("h").value);
+            var x1 = parseFloat(document.getElementById("x1").value);
+            var y1 = parseFloat(document.getElementById("y1").value);
+            var x2 = parseFloat(document.getElementById("x2").value);
+            var y2 = parseFloat(document.getElementById("y2").value);
+            var x3 = parseFloat(document.getElementById("x3").value);
+            var y3 = parseFloat(document.getElementById("y3").value);
+            var h = parseFloat(document.getElementById("x2").value) - parseFloat(document.getElementById("x1").value);
 
             var area = (h/3) * (y1 + 4*y2 + y3);
             console.log("El area bajo la recta de los puntos es: " + area);

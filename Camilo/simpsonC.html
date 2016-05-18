@@ -14,10 +14,10 @@ and open the template in the editor.
 
     </head>
     <body>
-
+<a href="../index.html">Home</a>
         <div>Simpson Compuesto</div>
         <div>
-          Ingrese numero de puntos 
+          Ingrese numero de puntos
           (impares)
           <input id="numerop"></input>
           <button onclick="puntos()">Ejectutar</button><br>
@@ -40,25 +40,28 @@ and open the template in the editor.
                 for (var i = 0; i < numerop; i++) {
                   oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
                 }
-                oli += "H<br><input id='h'><br><button onclick='equaciones()'>Ejectutar</button>";
+                oli += "<br><button onclick='equaciones()'>Ejectutar</button>";
                 $( "#puntos" ).append(oli);
               }
             }
 
             function equaciones() {
-            var numerop = document.getElementById("numerop").value;
-            var y0 = parseInt(document.getElementById("y1").value);
-            var yn = parseInt(document.getElementById("y" + numerop).value);
-            var h = parseInt(document.getElementById("h").value);
+            var numerop = parseInt(document.getElementById("numerop").value);
+            var y0 = parseFloat(document.getElementById("y1").value);
+            var yn = parseFloat(document.getElementById("y" + numerop).value);
+            var h = parseFloat(document.getElementById("x2").value) - parseFloat(document.getElementById("x1").value);
             var y = [];
             var yi1 = 0;
             var yi2 = 0;
-            for (var i = 0; i <= (numerop-2)/2; i++) {
-              y[i-1] = parseInt(document.getElementById("y" + (i+1)).value);
+            for (var i = 2; i < numerop; i++) {
+              //y[i-1] = document.getElementById("y" + (i+1)).value;
+              var b = parseFloat(document.getElementById("y" + i).value);
               if (i % 2 != 0) {
-                yi1 += parseInt(y[i]);
+                //yi1 += parseFloat(y[i]);
+                yi1 += b;
               } else {
-                yi2 += parseInt(y[i+1]);
+                //yi2 += parseFloat(y[i+1]);
+                yi2 += b;
               }
             }
 

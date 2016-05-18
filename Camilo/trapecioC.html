@@ -14,8 +14,8 @@ and open the template in the editor.
 
     </head>
     <body>
-
-        <div>Trapecio</div>
+<a href="../index.html">Home</a>
+        <div>Trapecio Compuesto</div>
         <div>
           Ingrese numero de puntos
           <input id="numerop"></input>
@@ -34,21 +34,20 @@ and open the template in the editor.
               for (var i = 0; i < numerop; i++) {
                 oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
               }
-              oli += "H<br><input id='h'><br><button onclick='equaciones()'>Ejectutar</button>";
+              oli += "<br><button onclick='equaciones()'>Ejectutar</button>";
               $( "#puntos" ).append(oli);
             }
 
             function equaciones() {
-            var numerop = document.getElementById("numerop").value;
-            var y0 = parseInt(document.getElementById("y1").value);
-            var yn = parseInt(document.getElementById("y" + numerop).value);
-            var h = parseInt(document.getElementById("h").value);
+            var numerop = parseInt(document.getElementById("numerop").value);
+            var y0 = parseFloat(document.getElementById("y1").value);
+            var yn = parseFloat(document.getElementById("y" + numerop).value);
+            var h = parseFloat(document.getElementById("x2").value) - parseFloat(document.getElementById("x1").value);
             var x = [];
             var y = [];
             var yi = 0;
             for (var i = 1; i < numerop-1; i++) {
-              x[i-1] = parseInt(document.getElementById("x" + (i+1)).value);
-              y[i-1] = parseInt(document.getElementById("y" + (i+1)).value);
+              y[i-1] = parseFloat(document.getElementById("y" + (i+1)).value);
               yi += parseInt(y[i-1]);
             }
 
