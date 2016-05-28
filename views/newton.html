@@ -1,57 +1,34 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Practica Analisis Numerico</title>
-  <!-- Tell the browser to be responsive to screen width -->
+  <title>Numerical Methods</title>
+
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <!-- jQuery 2.1.4 -->
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- daterange picker -->
   <link rel="stylesheet" href="../node_modules/daterangepicker/daterangepicker-bs3.css">
-  <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="../node_modules/icheck/skins/all.css">
-  <!-- Bootstrap Color Picker -->
   <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
-  <!-- Bootstrap time Picker -->
   <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
-  <!-- Select2 -->
   <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
-  <!-- Theme style -->
   <link rel="stylesheet" href="../css/cover.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../css/cover2.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
-    <!-- Logo -->
     <a href="../index.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">AN</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">Practica Analisis Numerico</span>
+      <span class="logo-mini">NM</span>
+      <span class="logo-lg">Numerical Methods</span>
     </a>
-    <!-- Header Navbar: style can be found in header.less -->
+
     <nav class="navbar navbar-static-top" role="navigation">
-      <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -59,89 +36,90 @@
         <span class="icon-bar"></span>
       </a>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-
-          <!-- Notifications: style can be found in dropdown.less -->
-
-          <!-- Tasks: style can be found in dropdown.less -->
-
-
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <!--<a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>-->
-          </li>
-        </ul>
-      </div>
     </nav>
   </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
+  
+   <aside class="main-sidebar">
+
     <section class="sidebar">
 
 
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
-        <li class="header">METHODS</li>
-        <li class="treeview">
-          <a href="biseccion.html">
-            <i class="fa fa-line-chart"></i> <span>Biseccion</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="puntofijo.html">
-            <i class="fa fa-files-o"></i>
-            <span>Punto Fijo</span>
-          <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="reglafalsa.html">
-            <i class="fa fa-area-chart"></i> <span>Regla Falsa</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview active">
-          <a href="newton.html">
-            <i class="fa fa-bar-chart"></i>
-            <span>Newton-Raphson</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="secante.html">
-            <i class="fa fa-pie-chart"></i>
-            <span>Secante</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="header">Iterative Methods</li>
-        <li class="treeview">
-          <a href="Iterative/factorizacion.html">
-            <i class="fa fa-arrows-h"></i> <span>Factorizacion LU</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="Iterative/jacobi.html">
-            <i class="fa fa-balance-scale"></i> <span>Jacobi</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="Iterative/gauss.html">
-            <i class="fa fa-circle-o"></i> <span>Gauss-Seidel</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="Iterative/biseccion.html">
-            <i class="fa fa-cog"></i> <span>Otra</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
+
+
+     <ul class="sidebar-menu">
+        <li class="treeview header">Non Linear Equations</li>
+              <li class="treeview">
+                <a>
+                  Closed methods
+                </a>
+                <ul class="active treeview-menu">
+                  <li><a href="biseccion.html"><i class="fa fa-line-chart"></i> Bisection</a></li>
+                  <li><a href="puntofijo.html"><i class="fa fa-files-o"></i> Fixed Point</a></li>
+                  <li><a href="reglafalsa.html"><i class="fa fa-area-chart"></i> False Law</a></li>
+                </ul>
+                <a>
+                  Opened methods
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="secante.html"> <i class="fa fa-pie-chart"></i> Secant</a></li>
+                  <li><a href="newton.html"><i class="fa fa-bar-chart"></i> Newton Raphson</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Iterative Methods</li>
+              <li class="treeview">
+                <a>
+                  Iterative
+                </a>
+                <ul class="treeview-menu">
+                <li><a href="Iterative/gauss.html"><i class="fa fa-arrows-h"></i> Gaussian Elimination</a></li>
+                  <li><a href="Iterative/factorizacion.html"><i class="fa fa-arrows-h"></i> LU Factorization</a></li>
+                  <li><a href="Iterative/jacobi.html"> <i class="fa fa-balance-scale"></i>Jacobi</a></li>
+                  <li><a href="Iterative/gauss.html"> <i class="fa fa-circle-o"></i>Gauss-Seidel</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Interpolating Methods</li>
+              <li class="treeview">
+                <a>
+                  Interpolation
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="Interpolation/richardson.html"><i class="fa fa-circle-o"></i> Richardson</a></li>
+                  <li><a href="Interpolation//sor.html"><i class="fa fa-circle-o"></i> SOR</a></li>
+                  <li><a href="Interpolation/lagrange.html"><i class="fa fa-circle-o"></i> LaGrange</a></li>
+                  <li><a href="Interpolation/newton.html"><i class="fa fa-circle-o"></i> Newton</a></li>
+                  <li><a href="Interpolation/splinesl.html"><i class="fa fa-circle-o"></i> Lineal Splines</a></li>
+                  <li><a href="Interpolation/splinesc.html"><i class="fa fa-circle-o"></i> Cubic Splines</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Numerical Integration Methods</li>
+              <li class="treeview">
+                <a>
+                  Numerical Integration
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="Integration/trapecio.html"><i class="fa fa-circle-o"></i> Trapezium</a></li>
+                  <li><a href="Integration/trapecioC.html"><i class="fa fa-circle-o"></i> Complex Trapezium</a></li>
+                  <li><a href="Integration/simpson.html"><i class="fa fa-circle-o"></i> Simpson 1/3</a></li>
+                  <li><a href="Integration/simpsonC.html"><i class="fa fa-circle-o"></i> Complex Simpson 1/3</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Diferential Equations Methods</li>
+              <li class="treeview">
+                <a>
+                  Diferential Equations
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="Diferential/euler.html"><i class="fa fa-circle-o"></i> Euler</a></li>
+                  <li><a href="Diferential/eulerm.html"><i class="fa fa-circle-o"></i> Modified Euler</a></li>
+                  <li><a href="Diferential/rk4.html"><i class="fa fa-circle-o"></i> Runge-Kutta 4</a></li>
+
+                </ul>
+              </li>
+
 
       </ul>
     </section>
-    <!-- /.sidebar -->
+
   </aside>
 
   <!-- Content Wrapper. Contains page content -->

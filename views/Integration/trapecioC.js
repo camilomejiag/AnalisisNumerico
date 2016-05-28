@@ -1,41 +1,17 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-
-        <title>oli</title>
-        <script src="../node_modules/mathjs/dist/math.js"></script>
-        <script src="../js/fraction.js"></script>
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-
-    </head>
-    <body>
-<a href="../index.html">Home</a>
-        <div>Trapecio Compuesto</div>
-        <div>
-          Ingrese numero de puntos
-          <input id="numerop"></input>
-          <button onclick="puntos()">Ejectutar</button><br>
-          <div id="puntos"></div>
-
-
-
-
-            <script>
-
-            function puntos() {
+//Tiene que ser mas de 2 puntos. Corregir
+function puntos() {
               var numerop = document.getElementById("numerop").value;
               $("#puntos").empty();
               var oli = "";
+              if (numerop <= 2) {
+                alert("La cantidad de puntos debe ser mayor a 2")
+              } else {
               for (var i = 0; i < numerop; i++) {
                 oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
               }
               oli += "<br><button onclick='equaciones()'>Ejectutar</button>";
               $( "#puntos" ).append(oli);
+              }
             }
 
             function equaciones() {
@@ -57,9 +33,3 @@ and open the template in the editor.
 
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
-
-            </script>
-        </div>
-
-    </body>
-</html>

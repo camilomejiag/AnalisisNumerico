@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-
-        <title>oli</title>
-        <script src="../node_modules/mathjs/dist/math.js"></script>
-        <script src="../js/fraction.js"></script>
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-
-    </head>
-    <body>
-<a href="../index.html">Home</a>
-        <div>Simpson Compuesto</div>
-        <div>
-          Ingrese numero de puntos
-          (impares)
-          <input id="numerop"></input>
-          <button onclick="puntos()">Ejectutar</button><br>
-          <div id="puntos"></div>
-
-
-
-
-            <script>
-
-            function puntos() {
+function puntos() {
               var numerop = document.getElementById("numerop").value;
               $("#puntos").empty();
               var oli = "";
@@ -71,9 +41,3 @@ and open the template in the editor.
 
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
-
-            </script>
-        </div>
-
-    </body>
-</html>

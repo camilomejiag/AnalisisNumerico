@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Practica Analisis Numerico</title>
+  <title>Numerical Methods</title>
 
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -27,9 +26,9 @@
 
     <a href="index.html" class="logo">
 
-      <span class="logo-mini">AN</span>
+      <span class="logo-mini">NM</span>
 
-      <span class="logo-lg">Practica Analisis Numerico</span>
+      <span class="logo-lg">Numerical Methods</span>
     </a>
 
     <nav class="navbar navbar-static-top" role="navigation">
@@ -52,94 +51,74 @@
 
 
       <ul class="sidebar-menu">
-        <li class="treeview header">METHODS</li>
+        <li class="treeview header">Non Linear Equations</li>
               <li class="treeview">
                 <a>
-                  Methods
+                  Closed methods
+                </a>
+                <ul class="active treeview-menu">
+                  <li><a href="views/biseccion.html"><i class="fa fa-line-chart"></i> Bisection</a></li>
+                  <li><a href="views/puntofijo.html"><i class="fa fa-files-o"></i> Fixed Point</a></li>
+                  <li><a href="views/reglafalsa.html"><i class="fa fa-area-chart"></i> False Law</a></li>
+                </ul>
+                <a>
+                  Opened methods
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="index.html"><i class="fa fa-circle-o"></i> Biseccion</a></li>
-                  <li><a href="index2.html"><i class="fa fa-circle-o"></i> Newton Raphson</a></li>
+                  <li><a href="views/secante.html"> <i class="fa fa-pie-chart"></i> Secant</a></li>
+                  <li><a href="views/newton.html"><i class="fa fa-bar-chart"></i> Newton Raphson</a></li>
                 </ul>
               </li>
-        <li class="header">METHODS</li>
-        <li class="treeview">
-          <a href="biseccion.html">
-            <i class="fa fa-line-chart"></i> <span>Biseccion</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-            <li class="treeview">
-              <a href="views/puntofijo.html">
-                <i class="fa fa-files-o"></i>
-                <span>Punto Fijo</span>
-              <i class="fa fa-angle-left pull-right"></i>
-              </a>
-            </li>
-            <li class="treeview">
-              <a href="views/reglafalsa.html">
-                <i class="fa fa-area-chart"></i> <span>Regla Falsa</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-            </li>
-            <li class="treeview">
-              <a href="views/newton.html">
-                <i class="fa fa-bar-chart"></i>
-                <span>Newton-Raphson</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-            </li>
-            <li class="treeview">
-              <a href="views/secante.html">
-                <i class="fa fa-pie-chart"></i>
-                <span>Secante</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-            </li>
+              <li class="treeview header">Iterative Methods</li>
+              <li class="treeview">
+                <a>
+                  Iterative
+                </a>
+                <ul class="treeview-menu">
+                <li><a href="Iterative/gauss.html"><i class="fa fa-arrows-h"></i> Gaussian Elimination</a></li>
+                  <li><a href="views/Iterative/factorizacion.html"><i class="fa fa-arrows-h"></i> LU Factorization</a></li>
+                  <li><a href="views/Iterative/jacobi.html"> <i class="fa fa-balance-scale"></i>Jacobi</a></li>
+                  <li><a href="views/Iterative/gauss.html"> <i class="fa fa-circle-o"></i>Gauss-Seidel</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Interpolating Methods</li>
+              <li class="treeview">
+                <a>
+                  Interpolation
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="views/Interpolation/richardson.html"><i class="fa fa-circle-o"></i> Richardson</a></li>
+                  <li><a href="views/Interpolation//sor.html"><i class="fa fa-circle-o"></i> SOR</a></li>
+                  <li><a href="views/Interpolation/lagrange.html"><i class="fa fa-circle-o"></i> LaGrange</a></li>
+                  <li><a href="views/Interpolation/newton.html"><i class="fa fa-circle-o"></i> Newton</a></li>
+                  <li><a href="views/Interpolation/splinesl.html"><i class="fa fa-circle-o"></i> Lineal Splines</a></li>
+                  <li><a href="views/Interpolation/splinesc.html"><i class="fa fa-circle-o"></i> Cubic Splines</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Numerical Integration Methods</li>
+              <li class="treeview">
+                <a>
+                  Numerical Integration
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="views/Integration/trapecio.html"><i class="fa fa-circle-o"></i> Trapezium</a></li>
+                  <li><a href="views/Integration/trapecioC.html"><i class="fa fa-circle-o"></i> Complex Trapezium</a></li>
+                  <li><a href="views/Integration/simpson.html"><i class="fa fa-circle-o"></i> Simpson 1/3</a></li>
+                  <li><a href="views/Integration/simpsonC.html"><i class="fa fa-circle-o"></i> Complex Simpson 1/3</a></li>
+                </ul>
+              </li>
+              <li class="treeview header">Diferential Equations Methods</li>
+              <li class="treeview">
+                <a>
+                  Diferential Equations
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="views/Diferential/euler.html"><i class="fa fa-circle-o"></i> Euler</a></li>
+                  <li><a href="views/Diferential/eulerm.html"><i class="fa fa-circle-o"></i> Modified Euler</a></li>
+                  <li><a href="views/Diferential/rk4.html"><i class="fa fa-circle-o"></i> Runge-Kutta 4</a></li>
 
-        <li class="header">Iterative Methods</li>
-        <li class="treeview">
-          <a href="views/Iterative/factorizacion.html">
-            <i class="fa fa-arrows-h"></i> <span>Factorizacion LU</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="views/Iterative/jacobi.html">
-            <i class="fa fa-balance-scale"></i> <span>Jacobi</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="views/Iterative/gauss.html">
-            <i class="fa fa-circle-o"></i> <span>Gauss-Seidel</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="views/Iterative/biseccion.html">
-            <i class="fa fa-cog"></i> <span>Otra</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-
-        <!-- PArcial 4 -->
-        <li class="header">Iterative Methods</li>
-        <li class="treeview">
-          <a href="Camilo/trapecio.html">
-            <i class="fa fa-cog"></i> <span>Trapecio</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="Camilo/trapecioC.html">
-            <i class="fa fa-cog"></i> <span>Trapecio Compuesto</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="Camilo/simpson.html">
-            <i class="fa fa-cog"></i> <span>Simpson 1/3</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="Camilo/simpsonC.html">
-            <i class="fa fa-cog"></i> <span>Simpson 1/3 Compuesto</span> <i class="fa fa-angle-left pull-right"></i>
-          </a>
-        </li>
+                </ul>
+              </li>
 
 
       </ul>
@@ -152,13 +131,13 @@
 
     <section class="content-header">
       <h1>
-        Metodo Actual
+        Actual Method
         <small>Preview</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Methods</a></li>
-        <li class="active">Metodo Actual</li>
+        <li class="active">Actual Method</li>
       </ol>
     </section>
 
@@ -172,14 +151,10 @@
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="node_modules/select2/dist/js/select2.full.min.js"></script>
-<!--<script src="node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask.js"></script>
-<script src="node_modules/jquery.inputmask/dist/inputmask/inputmask.date.extensions.js"></script>
-<script src="node_modules/jquery.inputmask/dist/inputmask/inputmask.extensions.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
 <script src="node_modules/daterangepicker/daterangepicker.js"></script>
 <script src="node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
 <script src="node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
-<!--<script src="node_modules/slimScroll/lib/slimscroll.js"></script>-->
 <script src="node_modules/iCheck/icheck.min.js"></script>
 <script src="node_modules/fastclick/lib/fastclick.js"></script>
 <script src="js/app.min.js"></script>
