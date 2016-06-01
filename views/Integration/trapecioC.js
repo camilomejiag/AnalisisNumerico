@@ -2,7 +2,7 @@
 function puntos() {
               var numerop = document.getElementById("numerop").value;
               $("#puntos").empty();
-              var oli = "";
+              var oli = "<br>";
               if (numerop <= 2) {
                 alert("La cantidad de puntos debe ser mayor a 2")
               } else {

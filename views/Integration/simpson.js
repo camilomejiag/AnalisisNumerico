@@ -1,4 +1,5 @@
 function equaciones() {
+  $('.result').empty();
             var x1 = parseFloat(document.getElementById("x1").value);
             var y1 = parseFloat(document.getElementById("y1").value);
             var x2 = parseFloat(document.getElementById("x2").value);
@@ -8,5 +9,6 @@ function equaciones() {
             var h = parseFloat(document.getElementById("x2").value) - parseFloat(document.getElementById("x1").value);
 
             var area = (h/3) * (y1 + 4*y2 + y3);
-            console.log("El area bajo la recta de los puntos es: " + area);
+            //document.getElementById('result') = area;
+            $('.result').append("<br>El restulado es : "  + area);
       }

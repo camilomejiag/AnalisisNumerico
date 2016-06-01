@@ -18,6 +18,100 @@
   <link rel="stylesheet" href="../css/cover.css">
   <link rel="stylesheet" href="../css/cover2.css">
 
+  <style>
+  @media only screen and (min-width: 0px) {
+      .funcion:after {
+          content: 'F(x)';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .funcion:after {
+          content: 'Funcion';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .derivada:after {
+          content: "F'(x)";
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .derivada:after {
+          content: 'Derivada';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .imin:after {
+          content: 'I.Minimo';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .imin:after {
+          content: 'Intervalo Minimo';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .imax:after {
+          content: 'I.Maximo';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .imax:after {
+          content: 'Intervalo Maximo';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .numero:after {
+          content: '# Iteraciones';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .numero:after {
+          content: 'Numero de Iteraciones';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .error:after {
+          content: 'Error';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .error:after {
+          content: 'Error Absoluto';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .toler:after {
+          content: 'Toleracia';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .toler:after {
+          content: 'Tolerancia';
+          display: block;
+      }
+  }
+  </style>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -127,7 +221,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Metodo de Newton-Raphson
+        Newton-Raphson
 
       </h1>
       <ol class="breadcrumb">
@@ -146,21 +240,21 @@
       </section>
     <div class="col-xs-offset-1 col-lg-offset-0">
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Funcion</span>
+        <span class="input-group-addon funcion" id="basic-addon1"></span>
         <input type="text" class="form-control" id="funcion1" placeholder="Funcion" aria-describedby="basic-addon1"></input>
       </div>
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Derivada</span>
+        <span class="input-group-addon derivada" id="basic-addon1"></span>
         <input type="text" class="form-control" id="derivada" placeholder="Derivada" aria-describedby="basic-addon1"></input>
       </div>
 
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Intervalo minimo</span>
+        <span class="input-group-addon imin" id="basic-addon1"></span>
         <input type="text" class="form-control" id="intmin" placeholder="Valor Minimo" aria-describedby="basic-addon1">
       </div>
 
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Intervalo Maximo</span>
+        <span class="input-group-addon imax" id="basic-addon1"></span>
         <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1">
       </div>
       </div>
@@ -175,17 +269,17 @@
       </section>
       <div class="col-xs-offset-1 col-lg-offset-0">
         <div class="col-lg-10 col-xs-11 input-group margin-top">
-          <span class="input-group-addon" id="basic-addon1">Numero Iteraciones</span>
+          <span class="input-group-addon numero" id="basic-addon1"></span>
           <input type="text" class="form-control" id="iteraciones" placeholder="Numero Iteracion" aria-describedby="basic-addon1"></input>
         </div>
 
         <div class="col-lg-10 col-xs-11 input-group margin-top">
-          <span class="input-group-addon" id="basic-addon1">Error Absoluto</span>
+          <span class="input-group-addon error" id="basic-addon1"></span>
           <input type="text" class="form-control" id="delta" placeholder="Error Absoluto" aria-describedby="basic-addon1">
         </div>
 
         <div class="col-lg-10 col-xs-11 input-group margin-top">
-          <span class="input-group-addon" id="basic-addon1">Tolerancia</span>
+          <span class="input-group-addon toler" id="basic-addon1"></span>
           <input type="text" class="form-control" id="tolerancia" placeholder="Tolerancia" aria-describedby="basic-addon1">
         </div>
         </div>

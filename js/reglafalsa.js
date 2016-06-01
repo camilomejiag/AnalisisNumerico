@@ -1,4 +1,5 @@
 $( "#reglafalsa" ).click(function() {
+  $( ".append1" ).empty();
 
   var funcion = $('#funcion1').val();
 

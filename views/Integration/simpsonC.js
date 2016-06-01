@@ -1,7 +1,7 @@
 function puntos() {
               var numerop = document.getElementById("numerop").value;
               $("#puntos").empty();
-              var oli = "";
+              var oli = "<br>";
               if (numerop <= 4) {
                 alert("El numero debe ser impar y mayor que 3.");
               } else if ((numerop % 2) == 0) {

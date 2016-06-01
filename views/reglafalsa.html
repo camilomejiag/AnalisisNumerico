@@ -18,6 +18,87 @@
   <link rel="stylesheet" href="../css/cover.css">
   <link rel="stylesheet" href="../css/cover2.css">
 
+  <style>
+  @media only screen and (min-width: 0px) {
+      .funcion:after {
+          content: 'F(x)';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .funcion:after {
+          content: 'Funcion';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .imin:after {
+          content: 'I.Minimo';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .imin:after {
+          content: 'Intervalo Minimo';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .imax:after {
+          content: 'I.Maximo';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .imax:after {
+          content: 'Intervalo Maximo';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .numero:after {
+          content: '# Iteraciones';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .numero:after {
+          content: 'Numero de Iteraciones';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .error:after {
+          content: 'Error';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .error:after {
+          content: 'Error Absoluto';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .toler:after {
+          content: 'Toleracia';
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .toler:after {
+          content: 'Tolerancia';
+          display: block;
+      }
+  }
+  </style>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -127,13 +208,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Metodo de Regla Falsa
+        False Law
 
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Methods</a></li>
-        <li class="active">Regla Falsa</li>
+        <li class="active">False Law</li>
       </ol>
     </section>
 
@@ -141,23 +222,23 @@
     <div class="col-lg-6 col-xs-6">
       <section>
         <h4>
-          Regla Falsa
+          False Law
         </h4>
       </section>
     <div class="col-xs-offset-1 col-lg-offset-0">
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Funcion</span>
-        <input type="text" class="form-control" id="funcion1" placeholder="Funcion" aria-describedby="basic-addon1" value="x^3 + (x^2)(2^(1/3)) - 3x +3(2^(1/3))"></input>
+        <span class="input-group-addon funcion" id="basic-addon1"></span>
+        <input type="text" class="form-control" id="funcion1" placeholder="Funcion" aria-describedby="basic-addon1"></input>
       </div>
 
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Intervalo minimo</span>
-        <input type="text" class="form-control" id="intmin" placeholder="Valor Minimo" aria-describedby="basic-addon1" value="-10"></input>
+        <span class="input-group-addon imin" id="basic-addon1"></span>
+        <input type="text" class="form-control" id="intmin" placeholder="Valor Minimo" aria-describedby="basic-addon1"></input>
       </div>
 
       <div class="col-lg-10 col-xs-11 input-group margin-top">
-        <span class="input-group-addon" id="basic-addon1">Intervalo Maximo</span>
-        <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1" value="10"></input>
+        <span class="input-group-addon imax" id="basic-addon1"> </span>
+        <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1"></input>
       </div>
       </div>
 
@@ -171,18 +252,18 @@
       </section>
       <div class="col-xs-offset-1 col-lg-offset-0">
         <div class="col-lg-10 col-xs-11 input-group margin-top">
-          <span class="input-group-addon" id="basic-addon1">Numero Iteraciones</span>
-          <input type="text" class="form-control" id="iteraciones" placeholder="Numero Iteracion" aria-describedby="basic-addon1" value="100"></input>
+          <span class="input-group-addon numero" id="basic-addon1"></span>
+          <input type="text" class="form-control" id="iteraciones" placeholder="Numero Iteracion" aria-describedby="basic-addon1"></input>
         </div>
 
         <div class="col-lg-10 col-xs-11 input-group margin-top">
-          <span class="input-group-addon" id="basic-addon1">Error Absoluto</span>
-          <input type="text" class="form-control" id="delta" placeholder="Error Absoluto" aria-describedby="basic-addon1" value="0.0000001"></input>
+          <span class="input-group-addon error" id="basic-addon1"></span>
+          <input type="text" class="form-control" id="delta" placeholder="Error Absoluto" aria-describedby="basic-addon1"></input>
         </div>
 
         <div class="col-lg-10 col-xs-11 input-group margin-top">
-          <span class="input-group-addon" id="basic-addon1">Tolerancia</span>
-          <input type="text" class="form-control" id="tolerancia" placeholder="Tolerancia" aria-describedby="basic-addon1" value="0.00000001"></input>
+          <span class="input-group-addon toler" id="basic-addon1"></span>
+          <input type="text" class="form-control" id="tolerancia" placeholder="Tolerancia" aria-describedby="basic-addon1"></input>
         </div>
         </div>
     </div>

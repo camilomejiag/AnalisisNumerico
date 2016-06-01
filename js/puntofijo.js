@@ -1,5 +1,7 @@
 $( "#puntofijo" ).click(function() {
 
+    $( ".append1" ).empty();
+
   var funcion = $('#funcion1').val();
 
   var derivada = $('#derivada').val();
@@ -8,6 +10,7 @@ $( "#puntofijo" ).click(function() {
   var iteraciones = $('#iteraciones').val();
   var delta = $('#delta').val();
   var tolerancia = $('#tolerancia').val();
+  var errorr = 1;
 
 
   if (funcion == "") {
@@ -25,18 +28,19 @@ $( "#puntofijo" ).click(function() {
   alert("No ingreso nada en el criterio tolerancia. Vuelta a intentar.");
 } else {
 
-    $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>F'(x)</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
+    $( ".append1" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>X</th><th>f(x)</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
 
-  var x = parseFloat(Math.min(parseFloat(intmin) + (Math.random() * (parseFloat(intmax) - parseFloat(intmin))),parseFloat(intmax)));
-for(var i=1;i<=iteraciones;i++){
-   $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ evaluar(x) +"</td><td>" + errorr + "</td></tr>");
-  var x2 = x;
-  x = evaluar(x);
-  var errorr = x-x2;
-  if(Math.abs(errorr)<tolerancia){
+var x = parseFloat(Math.min(parseFloat(intmin) + (Math.random() * (parseFloat(intmax) - parseFloat(intmin))),parseFloat(intmax)));
+for(var i=1; i<=iteraciones; i++){
+    if (Math.abs(errorr) > delta) {
+      $( ".append" ).append("<tr><td>" + i +"</td><td>" + x + "</td><td>"+ evaluar(x) +"</td><td>" + errorr + "</td></tr>");
+      var x2 = x;
+      x = evaluar(x);
+      errorr = x-x2;
+  } else {
     break;
   }
-}
+} //fin for
 
 }
 });

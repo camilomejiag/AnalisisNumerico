@@ -1,4 +1,5 @@
 $( "#biseccion" ).click(function() {
+  $( ".append1" ).empty();
 
   var funcion = $('#funcion1').val();
 
@@ -32,7 +33,7 @@ $( "#biseccion" ).click(function() {
   var b;
   var xF;
    $( ".append" ).append(x + "<br>");
- for(var i=1;i<=iteraciones ;i++){
+ for(var i=1; i<=iteraciones ;i++){
    var xff = xF;
     a = evaluar(imi);
     b = evaluar(ima);
