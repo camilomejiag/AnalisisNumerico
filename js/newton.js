@@ -64,3 +64,7 @@ function evaluar(evaluar,funcion){
   var res = code.eval(scope);
   return res;
 }
+
+function description() {
+  alert("Newton-Raphson's formula is the most used one. If the initial value is Xi, the you can draw a tangent line from point (xi, f(xi)) of the curve. Commonly, the point where the tanget passes by is an aproximation of the solution of the lineal equation.");
+}

@@ -59,3 +59,7 @@ function evaluar(evaluar){
   var res = code.eval(scope);
   return res;
 }
+
+function description() {
+  alert("Opened methods use a formula to predict the root. This formula con develop like a simple iteration of a fixed point(also known as point iteration or sucesive sutitution), to find the root when solving f(x) = 0, you need to solve for any x = g(x). This transformation is accomplished by algebraic operations or adding/substracting x in same amounts in each side.")
+}

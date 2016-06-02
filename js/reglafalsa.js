@@ -77,3 +77,7 @@ function evaluar(evaluar){
   var res = code.eval(scope);
   return res;
 }
+
+function description() {
+  alert("Its a numerical method that we should use when we need to find the root of an equation. The function needs to be continuos in the given interval. You always need 2 points, with different sign, in order to have a root between them.");
+}

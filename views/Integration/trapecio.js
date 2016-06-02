@@ -8,3 +8,7 @@ function equaciones() {
             var area = ((y1 + y2)/2)*(x2-x1);
             $('.result').append("<br>El restulado es : "  + area);
             }
+
+function description() {
+  alert("Trapezium law is the first closed-formula of integration of Newton-Cotes, which is used to calculate an apporximate value fo a defined integrate");
+}

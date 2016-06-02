@@ -33,3 +33,7 @@ function puntos() {
 
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
+
+            function description() {
+              alert("A way of improving the precision of the trapezium method consist in dividing the segment of integration in various sub-segments and apply the method to each one of them. The area of each individual segment is added to obtain the integrate of the complete interval. The resultant equations are called integration formulas, of multiple application or compound.");
+            }
