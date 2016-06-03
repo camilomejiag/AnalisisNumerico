@@ -1,14 +1,13 @@
-//Tiene que ser mas de 2 puntos. Corregir
 function puntos() {
               var numerop = document.getElementById("numerop").value;
               $("#puntos").empty();
-              var oli = "<br>";
+              var oli = "";
               if (numerop <= 2) {
                 alert("La cantidad de puntos debe ser mayor a 2")
               } else {
               for (var i = 0; i < numerop; i++) {
-                oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
-              }
+                oli += "Punto " + (i+1) + "<br><input placeholder='x" + (i+1) + "' id='x" + (i+1) + "'><input placeholder='y" + (i+1) + "' id='y" + (i+1) + "'><br>";
+                              }
               oli += "<br><button onclick='equaciones()'>Ejectutar</button>";
               $( "#puntos" ).append(oli);
               }
@@ -30,10 +29,10 @@ function puntos() {
             var area = h/2 * (y0 + 2*yi + yn);
 
 
-
+            $('.result').append("<br>El restulado es : "  + area);
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
 
-            function description() {
-              alert("A way of improving the precision of the trapezium method consist in dividing the segment of integration in various sub-segments and apply the method to each one of them. The area of each individual segment is added to obtain the integrate of the complete interval. The resultant equations are called integration formulas, of multiple application or compound.");
-            }
+function description() {
+  alert("A way of improving the precision on trapezium's law consists on dividing the integration interval in various segments, and applying the method to each one of them. Adding all the areas below the segments will give the correct answer. The resulting equations are called integration formulas, of multiple action or complex.");
+}

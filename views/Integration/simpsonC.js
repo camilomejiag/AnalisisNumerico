@@ -8,8 +8,7 @@ function puntos() {
                 alert("Ingrese un numero impar de puntos.");
               } else {
                 for (var i = 0; i < numerop; i++) {
-                  oli += "Punto " + (i+1) + "<br><input id='x" + (i+1) + "'><input id='y" + (i+1) + "'><br>";
-                }
+                  oli += "Punto " + (i+1) + "<br><input placeholder='x" + (i+1) + "' id='x" + (i+1) + "'><input placeholder='y" + (i+1) + "' id='y" + (i+1) + "'><br>";
                 oli += "<br><button onclick='equaciones()'>Ejectutar</button>";
                 $( "#puntos" ).append(oli);
               }
@@ -38,6 +37,10 @@ function puntos() {
             var area = h/3 * (y0 + 4*yi1 + 2*yi2 + yn);
 
 
-
+            $('.result').append("<br>El restulado es : "  + area);
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
+
+function description() {
+  alert("Just like Trapezium, Complex Simpson improves by dividing the integration segment between various intervals, all of the same size.");
+}

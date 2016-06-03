@@ -12,3 +12,7 @@ function equaciones() {
             //document.getElementById('result') = area;
             $('.result').append("<br>El restulado es : "  + area);
       }
+
+function description() {
+      alert("Simpson's law's calculate the approximate value of a defined integrate, forming a parabola among 3 points.");
+}
