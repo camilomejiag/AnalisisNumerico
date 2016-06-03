@@ -2,7 +2,6 @@ $( "#newton" ).click(function() {
   $( ".append1" ).empty();
 
   var funcion = $('#funcion1').val();
-
   var derivada = $('#derivada').val();
   var intmin = $('#intmin').val();
   var intmax = $('#intmax').val();

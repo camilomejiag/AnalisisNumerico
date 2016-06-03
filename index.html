@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="AnalisisNumerico">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,15 +53,15 @@
       <ul class="sidebar-menu">
         <li class="treeview header">Non Linear Equations</li>
               <li class="treeview">
-                <a class="treeview"><i class="fa fa-table"></i>
+                <a  class="treeview"><i class="fa fa-table"></i>
                   Methods
                 </a>
-                <ul class="active treeview-menu">
-                  <li><a href="views/biseccion.html"><i class="fa fa-dot-circle-o"></i> Bisection</a></li>
-                  <li><a href="views/puntofijo.html"><i class="fa fa-dot-circle-o"></i> Fixed Point</a></li>
-                  <li><a href="views/reglafalsa.html"><i class="fa fa-dot-circle-o"></i> False Law</a></li>               
-                  <li><a href="views/secante.html"> <i class="fa fa-dot-circle-o"></i> Secant</a></li>
-                  <li><a href="views/newton.html"><i class="fa fa-dot-circle-o"></i> Newton Raphson</a></li>
+                <ul class="treeview-menu">
+                  <li ng-click="biseccion=!biseccion"><a href=""><i class="fa fa-dot-circle-o"></i> Bisection</a></li>
+                  <li ng-click="puntofijo=!puntofijo"><a href=""><i class="fa fa-dot-circle-o"></i> Fixed Point</a></li>
+                  <li ng-click="reglafalsa=!reglafalsa"><a href=""><i class="fa fa-dot-circle-o"></i> False Law</a></li>               
+                  <li ng-click="secante=!secante"><a href=""> <i class="fa fa-dot-circle-o"></i> Secant</a></li>
+                  <li ng-click="newton=!newton"><a href=""><i class="fa fa-dot-circle-o"></i> Newton Raphson</a></li>
                 </ul>
               </li>
               <li class="treeview header">Iterative Methods</li>
@@ -70,10 +70,10 @@
                   Iterative
                 </a>
                 <ul class="treeview-menu">
-                <li><a href="views/Iterative/gaussian.html"><i class="fa fa-plus-square-o"></i> Gaussian Elimination</a></li>
-                  <li><a href="views/Iterative/factorizacion.html"><i class="fa fa-plus-square-o"></i> LU Factorization</a></li>
-                  <li><a href="views/Iterative/jacobi.html"> <i class="fa fa-plus-square-o"></i>Jacobi</a></li>
-                  <li><a href="views/Iterative/gauss.html"> <i class="fa fa-plus-square-o"></i>Gauss-Seidel</a></li>
+                  <li ng-click="gaussian=!gaussian"><a href=""><i class="fa fa-plus-square-o"></i> Gaussian Elimination</a></li>
+                  <li ng-click="factorizacion=!factorizacion"><a href=""><i class="fa fa-plus-square-o"></i> LU Factorization</a></li>
+                  <li ng-click="jacobi=!jacobi"><a href=""> <i class="fa fa-plus-square-o"></i>Jacobi</a></li>
+                  <li ng-click="gauss=!gauss"><a href=""> <i class="fa fa-plus-square-o"></i>Gauss-Seidel</a></li>
                 </ul>
               </li>
               <li class="treeview header">Interpolating Methods</li>
@@ -82,12 +82,12 @@
                   Interpolation
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="views/Interpolation/richardson.html"><i class="fa fa-circle-o"></i> Richardson</a></li>
-                  <li><a href="views/Interpolation/sor.html"><i class="fa fa-circle-o"></i> SOR</a></li>
-                  <li><a href="views/Interpolation/lagrange.html"><i class="fa fa-circle-o"></i> LaGrange</a></li>
-                  <li><a href="views/Interpolation/newton.html"><i class="fa fa-circle-o"></i> Newton</a></li>
-                  <li><a href="views/Interpolation/splinesl.html"><i class="fa fa-circle-o"></i> Lineal Splines</a></li>
-                  <li><a href="views/Interpolation/splinesc.html"><i class="fa fa-circle-o"></i> Cubic Splines</a></li>
+                  <li ng-click="richardson=!richardson"><a href=""><i class="fa fa-circle-o"></i> Richardson</a></li>
+                  <li ng-click="sor=!sor"><a href=""><i class="fa fa-circle-o"></i> SOR</a></li>
+                  <li ng-click="lagrange=!lagrange"><a href=""><i class="fa fa-circle-o"></i> LaGrange</a></li>
+                  <li ng-click="newton2=!newton2"><a href=""><i class="fa fa-circle-o"></i> Newton</a></li>
+                  <li ng-click="splinesl=!splinesl"><a href=""><i class="fa fa-circle-o"></i> Lineal Splines</a></li>
+                  <li ng-click="splinesc=!splinesc"><a href=""><i class="fa fa-circle-o"></i> Cubic Splines</a></li>
                 </ul>
               </li>
               <li class="treeview header">Numerical Integration Methods</li>
@@ -96,10 +96,10 @@
                   Numerical Integration
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="views/Integration/trapecio.html"><i class="fa fa-circle"></i> Trapezium</a></li>
-                  <li><a href="views/Integration/trapecioC.html"><i class="fa fa-circle"></i> Complex Trapezium</a></li>
-                  <li><a href="views/Integration/simpson.html"><i class="fa fa-circle"></i> Simpson 1/3</a></li>
-                  <li><a href="views/Integration/simpsonC.html"><i class="fa fa-circle"></i> Complex Simpson 1/3</a></li>
+                  <li ng-click="trapezium=!trapezium"><a href=""><i class="fa fa-circle"></i> Trapezium</a></li>
+                  <li ng-click="trapeziumc=!trapeziumc"><a href=""><i class="fa fa-circle"></i> Complex Trapezium</a></li>
+                  <li ng-click="simpson=!simpson"a href=""><i class="fa fa-circle"></i> Simpson 1/3</a></li>
+                  <li ng-click="simpsonc=!simpsonc"><a href=""><i class="fa fa-circle"></i> Complex Simpson 1/3</a></li>
                 </ul>
               </li>
               <li class="treeview header">Diferential Equations Methods</li>
@@ -108,9 +108,9 @@
                   Diferential Equations
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="views/Diferential/euler.html"><i class="fa fa-cog"></i> Euler</a></li>
-                  <li><a href="views/Diferential/eulerm.html"><i class="fa fa-cog"></i> Modified Euler</a></li>
-                  <li><a href="views/Diferential/rk4.html"><i class="fa fa-cog"></i> Runge-Kutta 4</a></li>
+                  <li ng-click="euler=!euler"><a href=""><i class="fa fa-cog"></i> Euler</a></li>
+                  <li ng-click="eulerm=!eulerm"><a href=""><i class="fa fa-cog"></i> Modified Euler</a></li>
+                  <li ng-click="rk4=!rk4"><a href=""><i class="fa fa-cog"></i> Runge-Kutta 4</a></li>
 
                 </ul>
               </li>
@@ -123,22 +123,34 @@
 
 
   <div class="content-wrapper">
-
-    <section class="content-header">
-      <h1>
-        Actual Method
-        <small>Preview</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Methods</a></li>
-        <li class="active">Actual Method</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-
-    <!-- /.content -->
+    <div ng-show="biseccion" ng-include src=" 'views/biseccion.html' "> </div>
+      <div ng-show="puntofijo" ng-include src=" 'views/puntofijo.html' "> </div>
+      <div ng-show="reglafalsa" ng-include src=" 'views/reglafalsa.html' "> </div>
+      <div ng-show="secante" ng-include src=" 'views/secante.html' "> </div>
+      <div ng-show="newton" ng-include src=" 'views/newton.html' "> </div>
+      
+      <div ng-show="factorizacion" ng-include src=" 'views/Iterative/factorizacion.html' "> </div>
+      <div ng-show="gauss" ng-include src=" 'views/Iterative/gauss.html' "> </div>
+      <div ng-show="gaussian" ng-include src=" 'views/Iterative/gaussian.html' "> </div>
+      <div ng-show="jacobi" ng-include src=" 'views/Iterative/jacobi.html' "> </div>
+      
+      <div ng-show="newton2" ng-include src=" 'views/Interpolation/newton.html' "> </div>
+      <div ng-show="lagrange" ng-include src=" 'views/Interpolation/lagrange.html' "> </div>
+      <div ng-show="richardson" ng-include src=" 'views/Interpolation/richardson.html' "> </div>
+      <div ng-show="sor" ng-include src=" 'views/Interpolation/sor.html' "> </div>
+      <div ng-show="splinesl" ng-include src=" 'views/Interpolation/splinesl.html' "> </div>
+      <div ng-show="splinesc" ng-include src=" 'views/Interpolation/splinesc.html' "> </div>
+      
+      <div ng-show="simpson" ng-include src=" 'views/Integration/simpson.html' "> </div>
+      <div ng-show="simpsonc" ng-include src=" 'views/Integration/simpsonC.html' "> </div>
+      <div ng-show="trapezium" ng-include src=" 'views/Integration/trapecio.html' "> </div>
+      <div ng-show="trapeziumc" ng-include src=" 'views/Integration/trapecioC.html' "> </div>
+      
+      <div ng-show="euler" ng-include src=" 'views/Diferential/euler.html' "> </div>
+      <div ng-show="eulerm" ng-include src=" 'views/Diferential/eulerm.html' "> </div>
+      <div ng-show="rk4" ng-include src=" 'views/Diferential/rk4.html' "> </div>
+      
+      
   </div>
 
 
@@ -152,69 +164,15 @@
 <script src="node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
 <script src="node_modules/iCheck/icheck.min.js"></script>
 <script src="node_modules/fastclick/lib/fastclick.js"></script>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="js/app.min.js"></script>
 <script src="js/demo.js"></script>
 <script>
-  $(function () {
-    //Initialize Select2 Elements
-    $(".select2").select2();
+  
+  var AnalisisNumerico = angular.module('AnalisisNumerico', [] );
 
-    //Datemask dd/mm/yyyy
-    //$("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-    //Datemask2 mm/dd/yyyy
-    //$("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
-    //Money Euro
-    //$("[data-mask]").inputmask();
-
-    //Date range picker
-    $('#reservation').daterangepicker();
-    //Date range picker with time picker
-    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
-    //Date range as a button
-    $('#daterange-btn').daterangepicker(
-        {
-          ranges: {
-            'Today': [moment(), moment()],
-            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-            'This Month': [moment().startOf('month'), moment().endOf('month')],
-            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-          },
-          startDate: moment().subtract(29, 'days'),
-          endDate: moment()
-        },
-        function (start, end) {
-          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-        }
-    );
-
-    //iCheck for checkbox and radio inputs
-    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-      checkboxClass: 'icheckbox_minimal-blue',
-      radioClass: 'iradio_minimal-blue'
-    });
-    //Red color scheme for iCheck
-    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-      checkboxClass: 'icheckbox_minimal-red',
-      radioClass: 'iradio_minimal-red'
-    });
-    //Flat red color scheme for iCheck
-    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-      checkboxClass: 'icheckbox_flat-green',
-      radioClass: 'iradio_flat-green'
-    });
-
-    //Colorpicker
-    $(".my-colorpicker1").colorpicker();
-    //color picker with addon
-    $(".my-colorpicker2").colorpicker();
-
-    //Timepicker
-    $(".timepicker").timepicker({
-      showInputs: false
-    });
-  });
 </script>
 </body>
 </html>

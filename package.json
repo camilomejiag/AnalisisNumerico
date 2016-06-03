@@ -4,6 +4,8 @@
   "description": "Practica Analisis Numerico 2016-1",
   "main": "index.html",
   "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.0",
     "bootstrap": "^3.3.6",
     "bootstrap-colorpicker": "^2.3.0",
     "bootstrap-timepicker": "^0.5.2",
