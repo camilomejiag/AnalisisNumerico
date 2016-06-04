@@ -79,41 +79,41 @@
     </section>
 
     <!-- Main content -->
-    <div class="col-lg-6 col-xs-6">
+    <div class="col-lg-offset-2 col-xs-offset-2 col-lg-8 col-xs-8">
   <section>
     <h4 class="nowrap">
-      Euler
+      Runge Kutta 4
     </h4>
   </section>
 <div class="col-xs-offset-1 col-lg-offset-0">
   <div class="col-lg-10 col-xs-11 input-group margin-top">
     <span class="input-group-addon t1" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="funcion1" placeholder="Funcion" aria-describedby="basic-addon1"></input>
+    <input type="text" class="form-control" id="lag" placeholder="Funcion" aria-describedby="basic-addon1"></input>
   </div>
 
   <div class="col-lg-10 col-xs-11 input-group margin-top">
     <span class="input-group-addon t2" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="intmin" placeholder="Valor Minimo" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" id="nw" placeholder="Valor Minimo" aria-describedby="basic-addon1">
   </div>
 
   <div class="col-lg-10 col-xs-11 input-group margin-top">
     <span class="input-group-addon y" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" id="li" placeholder="Valor Maximo" aria-describedby="basic-addon1">
   </div>
     
     <div class="col-lg-10 col-xs-11 input-group margin-top">
     <span class="input-group-addon ft" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" id="cu" placeholder="Valor Maximo" aria-describedby="basic-addon1">
   </div>
     
     <div class="col-lg-10 col-xs-11 input-group margin-top">
     <span class="input-group-addon h" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="intmax" placeholder="Valor Maximo" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" id="op" placeholder="Valor Maximo" aria-describedby="basic-addon1">
   </div>
   </div>
 
 <div class="col-xs-offset-5 col-sm-offset-7 col-md-offset-6 col-lg-offset-5 ">
-  <button type="button" id="biseccion" class="btn btn-success calcular">Calcular</button>
+  <button type="button" id="biseccion" onclick="runge()" class="btn btn-success calcular">Calcular</button>
 </div>
 </div>
 
@@ -138,6 +138,7 @@
 <script src="../../node_modules/fastclick/lib/fastclick.js"></script>
 <script src="../../js/app.min.js"></script>
 <script src="../../js/demo.js"></script>
+<script src="rk4.js"></script>
 <script>
   $(function () {
     //Initialize Select2 Elements
