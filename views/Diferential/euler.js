@@ -1,15 +1,11 @@
 function euler() {
-    var t = document.getElementById("lag").value;
-    t = parseFloat(t);
-    var t2 = document.getElementById("nw").value;
-    t2 = parseFloat(t2);
-    var y = document.getElementById("li").value;
+    var t = parseFloat(document.getElementById("lag").value);
+    var t2 = parseFloat(document.getElementById("nw").value);
+    var y = parseFloat(document.getElementById("li").value);
     var ft = document.getElementById("cu").value;
-    var h = document.getElementById("op").value;
-    h = parseFloat(h);
+    var h = parseFloat(document.getElementById("op").value);
     var error = 1.12515248574854;
     error = parseFloat(error);
-    y = parseFloat(y);
     var scope;
     var yn;
     yn = parseFloat(yn);
