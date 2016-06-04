@@ -57,11 +57,11 @@
                   Methods
                 </a>
                 <ul class="treeview-menu">
-                  <li ng-click="biseccion=!biseccion"><a href=""><i class="fa fa-dot-circle-o"></i> Bisection</a></li>
-                  <li ng-click="puntofijo=!puntofijo"><a href=""><i class="fa fa-dot-circle-o"></i> Fixed Point</a></li>
-                  <li ng-click="reglafalsa=!reglafalsa"><a href=""><i class="fa fa-dot-circle-o"></i> False Law</a></li>               
-                  <li ng-click="secante=!secante"><a href=""> <i class="fa fa-dot-circle-o"></i> Secant</a></li>
-                  <li ng-click="newton=!newton"><a href=""><i class="fa fa-dot-circle-o"></i> Newton Raphson</a></li>
+                  <li ng-click="biseccion=!biseccion; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-dot-circle-o"></i> Bisection</a></li>
+                  <li ng-click="biseccion=false; puntofijo=!puntofijo; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-dot-circle-o"></i> Fixed Point</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=!reglafalsa; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-dot-circle-o"></i> False Law</a></li>               
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=!secante; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""> <i class="fa fa-dot-circle-o"></i> Secant</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=!newton; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-dot-circle-o"></i> Newton Raphson</a></li>
                 </ul>
               </li>
               <li class="treeview header">Iterative Methods</li>
@@ -70,10 +70,10 @@
                   Iterative
                 </a>
                 <ul class="treeview-menu">
-                  <li ng-click="gaussian=!gaussian"><a href=""><i class="fa fa-plus-square-o"></i> Gaussian Elimination</a></li>
-                  <li ng-click="factorizacion=!factorizacion"><a href=""><i class="fa fa-plus-square-o"></i> LU Factorization</a></li>
-                  <li ng-click="jacobi=!jacobi"><a href=""> <i class="fa fa-plus-square-o"></i>Jacobi</a></li>
-                  <li ng-click="gauss=!gauss"><a href=""> <i class="fa fa-plus-square-o"></i>Gauss-Seidel</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=!gaussian; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-plus-square-o"></i> Gaussian Elimination</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=!factorizacion; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-plus-square-o"></i> LU Factorization</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=!jacobi; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""> <i class="fa fa-plus-square-o"></i>Jacobi</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=!gauss; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""> <i class="fa fa-plus-square-o"></i>Gauss-Seidel</a></li>
                 </ul>
               </li>
               <li class="treeview header">Interpolating Methods</li>
@@ -82,12 +82,12 @@
                   Interpolation
                 </a>
                 <ul class="treeview-menu">
-                  <li ng-click="richardson=!richardson"><a href=""><i class="fa fa-circle-o"></i> Richardson</a></li>
-                  <li ng-click="sor=!sor"><a href=""><i class="fa fa-circle-o"></i> SOR</a></li>
-                  <li ng-click="lagrange=!lagrange"><a href=""><i class="fa fa-circle-o"></i> LaGrange</a></li>
-                  <li ng-click="newton2=!newton2"><a href=""><i class="fa fa-circle-o"></i> Newton</a></li>
-                  <li ng-click="splinesl=!splinesl"><a href=""><i class="fa fa-circle-o"></i> Lineal Splines</a></li>
-                  <li ng-click="splinesc=!splinesc"><a href=""><i class="fa fa-circle-o"></i> Cubic Splines</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=!richardson; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> Richardson</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false;  newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=!sor; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> SOR</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=!lagrange; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> LaGrange</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=!newton2; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> Newton</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=!splinesl; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> Lineal Splines</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=!splinesc;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> Cubic Splines</a></li>
                 </ul>
               </li>
               <li class="treeview header">Numerical Integration Methods</li>
@@ -96,10 +96,10 @@
                   Numerical Integration
                 </a>
                 <ul class="treeview-menu">
-                  <li ng-click="trapezium=!trapezium"><a href=""><i class="fa fa-circle"></i> Trapezium</a></li>
-                  <li ng-click="trapeziumc=!trapeziumc"><a href=""><i class="fa fa-circle"></i> Complex Trapezium</a></li>
-                  <li ng-click="simpson=!simpson"a href=""><i class="fa fa-circle"></i> Simpson 1/3</a></li>
-                  <li ng-click="simpsonc=!simpsonc"><a href=""><i class="fa fa-circle"></i> Complex Simpson 1/3</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=!trapezium; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle"></i> Trapezium</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=!trapeziumc; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle"></i> Complex Trapezium</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=!simpson; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle"></i> Simpson 1/3</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=!simpsonc; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle"></i> Complex Simpson 1/3</a></li>
                 </ul>
               </li>
               <li class="treeview header">Diferential Equations Methods</li>
@@ -108,9 +108,9 @@
                   Diferential Equations
                 </a>
                 <ul class="treeview-menu">
-                  <li ng-click="euler=!euler"><a href=""><i class="fa fa-cog"></i> Euler</a></li>
-                  <li ng-click="eulerm=!eulerm"><a href=""><i class="fa fa-cog"></i> Modified Euler</a></li>
-                  <li ng-click="rk4=!rk4"><a href=""><i class="fa fa-cog"></i> Runge-Kutta 4</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=!euler; eulerm=false; rk4=false;"><a href=""><i class="fa fa-cog"></i> Euler</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=!eulerm; rk4=false;"><a href=""><i class="fa fa-cog"></i> Modified Euler</a></li>
+                  <li ng-click="biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=!rk4;"><a href=""><i class="fa fa-cog"></i> Runge-Kutta 4</a></li>
 
                 </ul>
               </li>
@@ -170,7 +170,70 @@
 <script src="js/app.min.js"></script>
 <script src="js/demo.js"></script>
 <script>
+  $(function () {
+    //Initialize Select2 Elements
+    $(".select2").select2();
+
+    //Datemask dd/mm/yyyy
+    $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+    //Datemask2 mm/dd/yyyy
+    $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+    //Money Euro
+    $("[data-mask]").inputmask();
+
+    //Date range picker
+    $('#reservation').daterangepicker();
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+        {
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          startDate: moment().subtract(29, 'days'),
+          endDate: moment()
+        },
+        function (start, end) {
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+    );
+
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass: 'iradio_minimal-red'
+    });
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass: 'iradio_flat-green'
+    });
+
+    //Colorpicker
+    $(".my-colorpicker1").colorpicker();
+    //color picker with addon
+    $(".my-colorpicker2").colorpicker();
+
+    //Timepicker
+    $(".timepicker").timepicker({
+      showInputs: false
+    });
+  });
+</script>
+<script>
   
+    //var app = angular.module('App', ['ui.router','ui.bootstrap']);
   var AnalisisNumerico = angular.module('AnalisisNumerico', [] );
 
 </script>
