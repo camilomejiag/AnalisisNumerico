@@ -1,0 +1,22 @@
+PSEUDOCÓDIGO MÉTODO DE PUNTO FIJO<br>
+<p>Lea x0, tol, iter <br>y = f(x0) <br>
+Si iter <= 0 entonces<br>
+Muestre “Iteraciones incorrectas” <br>
+Sino<br>
+Si tol < 0 entonces<br>
+Muestre “Tolerancia incorrecta” <br>
+Sino<br>
+cont = 0 <br>error = tol + 1<br>
+Mientras y != 0 & error > tol & cont < iter <br>xn = g(x0) y = f(xn) <br>error = abs (xn - x0) x0 = xn cont = cont + 1<br>
+FinMientras<br>
+MostrarTabla<br>
+Si y = 0 entonces<br>
+Muestre x0 “Es raíz” <br>
+Sino<br>
+Si error < tol entonces<br>
+Muestre x0 “Es una aproximación a una raíz con tolerancia” tol<br>
+Sino<br>
+Muestre “El método fracasó en” iter “iteraciones” <br>FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br></p>

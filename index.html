@@ -82,7 +82,6 @@
                   Interpolation
                 </a>
                 <ul class="treeview-menu">
-                  <li ng-click="intro=false; biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=!richardson; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> Richardson</a></li>
                   <li ng-click="intro=false; biseccion=false; puntofijo=false; reglafalsa=false; secante=false;  newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=false; richardson=false; sor=!sor; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> SOR</a></li>
                   <li ng-click="intro=false; biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=false; lagrange=!lagrange; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> LaGrange</a></li>
                   <li ng-click="intro=false; biseccion=false; puntofijo=false; reglafalsa=false; secante=false; newton=false; factorizacion=false; gauss=false; gaussian=false; jacobi=false; newton2=!newton2; lagrange=false; richardson=false; sor=false; splinesl=false; splinesc=false;  simpson=false; simpsonc=false; trapezium=false; trapeziumc=false; euler=false; eulerm=false; rk4=false;"><a href=""><i class="fa fa-circle-o"></i> Newton</a></li>
@@ -137,7 +136,6 @@
       
       <div ng-show="newton2" ng-include src=" 'views/Interpolation/newton.html' "> </div>
       <div ng-show="lagrange" ng-include src=" 'views/Interpolation/lagrange.html' "> </div>
-      <div ng-show="richardson" ng-include src=" 'views/Interpolation/richardson.html' "> </div>
       <div ng-show="sor" ng-include src=" 'views/Interpolation/sor.html' "> </div>
       <div ng-show="splinesl" ng-include src=" 'views/Interpolation/splinesl.html' "> </div>
       <div ng-show="splinesc" ng-include src=" 'views/Interpolation/splinesc.html' "> </div>
@@ -185,6 +183,31 @@ throughout the course.  </h3>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="js/app.min.js"></script>
 <script src="js/demo.js"></script>
+          
+<script src="js/biseccion.js"></script>
+<script src="js/newton.js"></script>
+<script src="js/puntofijo.js"></script>
+<script src="js/reglafalsa.js"></script>
+<script src="js/secante.js"></script>
+          
+<script src="views/Diferential/euler.js"></script>
+<script src="views/Diferential/eulerm.js"></script>
+<script src="views/Diferential/rk4.js"></script>
+          
+<script src="views/Integration/simpson.js"></script>
+<script src="views/Integration/simpsonC.js"></script>
+<script src="views/Integration/trapecio.js"></script>
+<script src="views/Integration/trapecioC.js"></script>
+          
+<script src="views/Interpolation/lagrange.js"></script>
+<script src="views/Interpolation/newton.js"></script>
+<script src="views/Interpolation/splinesc.js"></script>
+<script src="views/Interpolation/splinesl.js"></script>
+          
+<script src="views/Iterative/factorizacion.js"></script>
+<script src="views/Iterative/gauss.js"></script>
+<script src="views/Iterative/gaussian.js"></script>
+<script src="views/Iterative/jacobi.js"></script>
 <script>
     
     $(".treeview").click(function() {

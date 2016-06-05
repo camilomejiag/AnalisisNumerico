@@ -81,6 +81,6 @@ var size = window.getComputedStyle(document.input4,':after').getPropertyValue('c
 var size = window.getComputedStyle(document.input5,':after').getPropertyValue('content');
 var size = window.getComputedStyle(document.input6,':after').getPropertyValue('content');
 
-function description() {
+function descriptionbi() {
   alert("Bisection method, also know as binary cut, interval separator or Bolzano, is a tipe of incremental search in which the interval is divided always by half. If the function changes sign in a piece of the interval,the function is evaluated in the middle point of given interval. The position of the root is determined by placing it in the middle point of the subinterval. The process is repeated until the closest approach is found.Evaluate the following differences in orden to determine the interval:\na)if f(Xi)f(Xr) < 0, then the root is between the left subinterval. Therefore, Xs=Xr.\nb)if (Xi )f(Xr ) > 0, then the root is between the right interval. Therefore, Xi = Xr. \nc)if f(Xi)f(Xr) = 0, the root is equal to Xr.");
 }

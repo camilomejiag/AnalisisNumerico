@@ -78,4 +78,9 @@ function lagranja() {
     var res = code.eval(scope);
     console.log(lagran);
     console.log(res);
+    $( ".lagrange" ).append("funcion: " + lagran +". Intervalo: " + res);
+}
+
+function descriptionla() {
+    alert("Lagrange's interpolation polinomial is simple a reformulation of newton's polinomial that doesnt use divided differences. It's formulas is:<br> ?_(i=0)^n = f(xi)Li(x) Donde ?_(j=0)^n = (X-Xj)/(Xi-Xj) y (j != 0)");
 }

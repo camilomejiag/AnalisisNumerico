@@ -1,4 +1,5 @@
 function euler() {
+    $( "#pegar" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>Y</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
     var t = parseFloat(document.getElementById("lag").value);
     var t2 = parseFloat(document.getElementById("nw").value);
     var y = parseFloat(document.getElementById("li").value);
@@ -33,11 +34,12 @@ function euler() {
             t = t + h;
             t = t.toFixed(2);
             t = parseFloat(t);
-			
+
 			console.log("t: "+t);
 			console.log("y: "+yn);
 			console.log("f(t,y): "+fte);
 			console.log("error: "+error);
+            $( ".append" ).append("<tr><td>" + t +"</td><td>" + yn + "</td><td>" + error + "</td></tr>");
         }
     } else {
         for (var i = 0; t != t2; i++) {
@@ -59,12 +61,17 @@ function euler() {
             t = t + h;
             t = t.toFixed(2);
             t = parseFloat(t);
-			
+
 			console.log("t: "+t);
 			console.log("y: "+yn);
 			console.log("f(t,y): "+fte);
 			console.log("error: "+error);
+            $( ".append" ).append("<tr><td>" + t +"</td><td>" + yn + "</td><td>" + error + "</td></tr>");
         }
     }
-    
+
+}
+
+function descriptioneu() {
+    alert("This method is used to predict the next Y-value using the slope (first derivate) in order to extrapolate lineally over the value of h using the formula: Yi+1 = Yi + hf(Xi, Yi)");
 }

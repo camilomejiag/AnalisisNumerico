@@ -1,5 +1,5 @@
-function splinesCuadraticos() {
-    var puntos = document.getElementById("cu").value;
+function splinesc() {
+    var puntos = document.getElementById("cuspc").value;
     var puntoS = String(puntos);
     var x = [];
     var y = [];
@@ -124,4 +124,10 @@ function splinesCuadraticos() {
     console.log(sDerivada);
     console.log(6 * x[0] + "a+" + 2 * x[0] + "b");
     console.log(6 * [x.length - 1] + "a+" + 2 * [x.length - 1] + "b");
+    $( ".splinesc" ).append("- " + Derivada +".<br>- " + Derivada2 + ".<br>- " + pDerivada +".<br>- " + sDerivada + ".<br>- " + (6 * x[0] + "a+" + 2 * x[0] + "b") +".<br>- " + (6 * [x.length - 1] + "a+" + 2 * [x.length - 1] + "b"));
+}
+
+function descriptionspc() {
+    alert("The objective on cubic trazers are to obtain a third grade polinomial equation for each interval between nodes: fi(x) = aix^3 + bix^2 + cix + di. For n+1 data, exist n intervals and 4*n variables to evaluate. just like cuadratic trazers, 4*n conditions are requires to evalute them. They are:<br> 1. Value of the functions should be equals in the interior nodes.<br> 2. The first and last equations muyst pass through the outermosts points.<br> 3. First derivates on inner nodes should be equals.<br> 4. Second derivates on inner nodes should be equal.<br> Natural Cubic Splines, 2nd derivate equals 0. 4*n equations must be found.");
+}
 }

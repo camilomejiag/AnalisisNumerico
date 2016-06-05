@@ -73,7 +73,7 @@ function evaluar(evaluar){
   return res;
 }
 
-function description() {
+function descriptionse() {
   alert(
 "A big problem when using the Newton-raphson method is the implementation of the derivate. Although its not very useful for the polynomials or the other functions, there are cases in which the derivative is extremaly difficult to calculate. in these cases, itcan be approximated by an infinite backward direntiation. This is secant (Also known as Modified Newton).");
 }

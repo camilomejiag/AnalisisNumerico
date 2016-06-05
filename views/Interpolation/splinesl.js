@@ -1,7 +1,7 @@
-function splinesLineales() {
-    var ev = document.getElementById("evaluar").value;
+function splinesl() {
+    var ev = document.getElementById("evaluarspl").value;
     ev = parseFloat(ev);
-    var puntos = document.getElementById("li").value;
+    var puntos = document.getElementById("lispl").value;
     var puntoS = String(puntos);
     var x = [];
     var y = [];
@@ -82,7 +82,12 @@ function splinesLineales() {
             var res = code.eval(scope);
             console.log(rectaE);
             console.log(res);
+            $( ".splinesl" ).append("funcion: " + rectaE +". Intervalo: " + res);
             break;
         }
     }
+}
+
+function descriptionspl() {
+    alert("The simplest way of connecting 2 points is by a straight line. First grade splines can be defined as an union of lineal functions:<br> f(x) = f(x0) + m0(x – x0) intervalo  x0 < x < x1<br> f(x) = f(x1) + m1(x – x1) intervalo  x1 < x < x2<br>...<br>f(x) = f(xn–1) + mn–1(x – xn–1) interval xn–1 < x < xn.<br>The only condition this method has is that X-coordenates must be ordered");
 }

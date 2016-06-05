@@ -9,6 +9,6 @@ function equaciones() {
             $('.result').append("<br>El restulado es : "  + area);
             }
 
-function description() {
+function descriptiontra() {
   alert("Trapezium law is the first closed-formula of integration of Newton-Cotes, which is used to calculate an apporximate value fo a defined integrate");
 }

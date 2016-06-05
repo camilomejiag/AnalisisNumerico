@@ -1,4 +1,5 @@
 function eulerModificado() {
+    $( "#pegar" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>Y</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
     var t = document.getElementById("lag").value;
     t = parseFloat(t);
     var t2 = document.getElementById("nw").value;
@@ -57,6 +58,7 @@ function eulerModificado() {
 			console.log("y: "+yn);
 			console.log("f(t,y): "+fte);
 			console.log("error: "+error);
+            $( ".append" ).append("<tr><td>" + t +"</td><td>" + yn + "</td><td>" + error + "</td></tr>");
         }
     } else {
         for (var i = 0; t != t2; i++) {
@@ -92,7 +94,12 @@ function eulerModificado() {
 			console.log("y: "+yn);
 			console.log("f(t,y): "+fte);
 			console.log("error: "+error);
+            $( ".append" ).append("<tr><td>" + t +"</td><td>" + yn + "</td><td>" + error + "</td></tr>");
         }
     }
     console.log("f(t,y)" + yn);
+}
+
+function descriptioneum() {
+    alert("This is an improved euler's formula, and uses euler method to predict a value and the middle point of the interval using:<br>K1 = Yi + h*F(Ti, Yi) <br>Yi+1 = Yi + (h/2)[F(Ti, Yi) + F(Ti+1, K1)]");
 }

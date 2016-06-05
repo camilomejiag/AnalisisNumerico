@@ -1,4 +1,5 @@
 function runge() {
+$( "#pegar" ).append("<table class='table table-bordered'><thead><tr><th>Iteracion</th><th>Y</th><th>Error</th></tr></thead><tbody class='append'></tbody></table>");
     var t1 = document.getElementById("lag").value;
     t1 = parseFloat(t1);
     var t2 = document.getElementById("nw").value;
@@ -87,6 +88,7 @@ function runge() {
 			console.log("y: "+yn);
 			console.log("f(t,y): "+fte);
 			console.log("error: "+error);
+            $( ".append" ).append("<tr><td>" + t +"</td><td>" + yn + "</td><td>" + error + "</td></tr>");
         }
     } else {
         t2 = parseFloat(t2);
@@ -146,7 +148,12 @@ function runge() {
 			console.log("y: "+yn);
 			console.log("f(t,y): "+fte);
 			console.log("error: "+error);
+            $( ".append" ).append("<tr><td>" + t +"</td><td>" + yn + "</td><td>" + error + "</td></tr>");
         }
     }
    
+}
+
+function descriptionrk() {
+    alert("Runge-Kutta's methods accomplish the exctitude of Taylor's series without the need of superior order derivates. The most popular RK method is the 4th order one. There are n-order methods, each one with more variables than the previous one. The 4th order one is: k1 = f(ti, Yi) <br>k2 = f(ti + h/2, Yi + hk1/2)  <br>k3 = f(ti + h/2, Yi + hk2/2)  <br>k4 = f(ti + h, Yi + hk3) <br>Yi+1 = Yi + (h/6)[k1 + 2k2 + 2 k3 +k4]");
 }

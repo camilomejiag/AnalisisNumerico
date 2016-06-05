@@ -13,6 +13,7 @@ function puntos() {
                 $( "#puntos" ).append(oli);
               }
             }
+}
 
             function equaciones() {
             var numerop = parseInt(document.getElementById("numerop").value);
@@ -41,6 +42,6 @@ function puntos() {
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
 
-function description() {
+function descriptionsic() {
   alert("Just like Trapezium, Complex Simpson improves by dividing the integration segment between various intervals, all of the same size.");
 }

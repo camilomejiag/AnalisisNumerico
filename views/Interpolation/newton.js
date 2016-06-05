@@ -79,4 +79,9 @@ function newton() {
     var res = code.eval(scope);
     console.log(newton);
     console.log(res);
+    $( ".newton2" ).append("funcion: " + newton +". Intervalo: " + res);
+}
+
+function descriptionne2() {
+    alert('Newtons polinomial, with divided differences is one of the most popular and useful waus of expressing a polinomial expression, which formula is:<br> P(x) = b0 + b1(x –x0) + b2(x – x0) (x – x1)…. + bn(x – x0)(x – x1)…(x – xn-1)<br> B0 = f(x0)<br> B1 = (f(x1) –f(x0)) / (x1 – x0) First divided difference<br> B2 =( ((f(x2) – f(x1)) / (x2 – x1)) ¬–  ((f(x1) – f(x0)) / (x1 – x0)) ) / (x2 – x0) Second divided difference<br> Bn =(((f(xn) – f(xn-1)) / (xn – xn-1)) – … –  ((f(x2) – f(x1)) / (x2 – x1)) – ((f(x1) – f(x0)) / (x1 – x0)) ) / (x3 – x0) n-number divided difference')
 }

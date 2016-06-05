@@ -1,7 +1,16 @@
-   <section class="content-header">
+<script language="javascript" type="text/javascript">
+    
+function popitup(url) {
+	newwindow=window.open(url,'name','height=500,width=400');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
+</script>
+<section class="content-header">
       <h1>
         Bisection Method
-         <small onclick="description()"><i class="fa fa-info"></i>  Description</small>
+         <small onclick="descriptionbi()"><i class="fa fa-info"></i>  Description</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -16,6 +25,7 @@
       Bisection
     </h4>
   </section>
+    <a href="pseudo/pbiseccion.html" onclick="return popitup('pseudo/pbiseccion.html')">Pseudocodigo</a>
 <div class="col-xs-offset-1 col-lg-offset-0">
   <div class="col-lg-10 col-xs-11 input-group margin-top">
     <span class="input-group-addon input1" id="basic-addon1"></span>
@@ -66,7 +76,7 @@
 
 
     <div class="append1 col-lg-8 col-lg-offset-2 col-xs-8 col-xs-offset-2">
-    
+
 
     </div>
   </div>
@@ -98,6 +108,7 @@
 <script src="../js/demo.js"></script>
 <!-- Page script -->
 <script src="../node_modules/mathjs/dist/math.js"></script>
+
 
 
 <script>

@@ -1,0 +1,43 @@
+PSEUDOCÓDIGO MÉTODO REGLA FALSA<br>
+<p>Lea x0, x1, iter, tol <br>y0 = f(x0) <br>y1 = f(x1) <br>Si y0 = 0 entonces<br>
+Muestre x0 “Es Raíz” <br>
+Sino<br>
+Si y1 = 0 entonces<br>
+Muestre x1 “Es Raíz” <br>
+Sino<br>
+Si (y0) (y1) > 0 entonces<br>
+Muestre “El intervalo es inadecuado” <br>
+Sino<br>
+Si iter <= 0 entonces<br>
+Muestre “Iteraciones incorrectas” <br>
+Sino<br>
+Si tol < 0 entonces<br>
+Muestre “Tolerancia incorrecta” <br>
+ <br>
+cont = 1 <br>error = tol +1<br>
+Mientras que error > tol & ym!= 0 & cont <= iter
+Si (y0) (ym) < 0 entonces <br>x1 = xm<br>
+y1 = ym<br>
+Sino<br>
+x0 = xm<br>
+y0 = ym<br>
+FinSi<br>
+ <br>
+cont = cont +1<br> error = abs (xm - xprov) <br>
+FinMientras<br>
+Mostrar Tabla<br>
+Si error < tol entonces<br>
+Muestre xm “Es una aproximación a una raíz” <br>
+Sino<br>
+Si ym= 0 entonces<br>
+Muestre xm “Es raíz” <br>
+Sino<br>
+Muestre “Fracasó en estas iteraciones” <br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+</p>

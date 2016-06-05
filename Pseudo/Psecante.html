@@ -1,0 +1,30 @@
+PSEUDOCÓDIGO MÉTODO SECANTE<br>
+<p>Lea x0, x1, tol, iter <br>y0 = f(x0) <br>Si y0 = 0 entonces<br>
+Muestre x0 “Es raíz” <br>
+Sino<br>
+Si iter <= 0 entonces<br>
+Muestre “Iteraciones incorrectas” <br>
+Sino<br>
+Si tol < 0 entonces<br>
+Muestre “Tolerancia incorrecta” <br>
+Sino y1 = f(x1) <br>cont = 0 <br>error = tol + 1 <br>den = y1 −y0<br>
+Mientras error > tol && y1 != 0 && den != 0 && cont < iter<br>
+ <br>
+error = abs (x2 - x1) <br>x0 = x1<br> y0 = y1 <br>x1 = x2 <br>y1 = f(x1) <br>den = y1 −y0 <br>cont = cont + 1<br>
+FinMientras<br>
+MostrarTabla<br>
+Si y1 = 0 entonces<br>
+Muestre x1 “Es raíz” <br>
+Sino<br>
+Si den = 0 entonces<br>
+Muestre “Hay una posible raíz múltiple” <br>
+Sino<br>
+Si error < tol entonces<br>
+Muestre x1 “Es una aprox a una raíz con tolerancia” tol<br>
+Sino<br>
+Muestre “El método fracasó en” iter “iteraciones” <br>FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br>
+FinSi<br></p>

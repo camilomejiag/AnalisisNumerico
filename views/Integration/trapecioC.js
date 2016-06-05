@@ -33,6 +33,6 @@ function puntos() {
             console.log("El area bajo las rectas de los puntos es: " + area);
             }
 
-function description() {
+function descriptiontrac() {
   alert("A way of improving the precision on trapezium's law consists on dividing the integration interval in various segments, and applying the method to each one of them. Adding all the areas below the segments will give the correct answer. The resulting equations are called integration formulas, of multiple action or complex.");
 }
