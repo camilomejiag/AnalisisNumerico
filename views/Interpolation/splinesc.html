@@ -1,4 +1,18 @@
+<style>
+  @media only screen and (min-width: 0px) {
+      .numspc:after {
+          display: none;
+      }
+  }
 
+  @media only screen and (min-width: 768px) {
+      .numspc:after {
+          content: 'Puntos';
+          display: block;
+      }
+  }
+
+  </style>
     <section class="content-header">
       <h1>
         Cubic Splines
@@ -12,14 +26,14 @@
     </section>
 
     <!-- Main content -->
-<div class="col-lg-6 col-xs-6">
+<div class="col-lg-offset-2 col-xs-offset-2 col-lg-8 col-xs-8">
 <div class="col-xs-offset-1 col-lg-offset-0">
   <div class="col-lg-10 col-xs-11 input-group margin-top">
-    <span class="input-group-addon numero" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="cuspc" placeholder="Numero de puntos" aria-describedby="basic-addon1"></input>
+    <span class="input-group-addon numspc" id="basic-addon1"></span>
+    <input type="text" class="form-control" id="cuspc" placeholder="(a,b,c)(d,e,f)(g,h,i)" aria-describedby="basic-addon1"></input>
 
   </div><br>
-  <button style="margin-left:5%" onclick="splinesc()">Ejecutar</button><br>
+    <button type="button" class="btn btn-success calcular" style="margin-left:5%" onclick="splinesc()">Ejecutar</button><br>
 
   </div>
 <div class="splinesc"></div>

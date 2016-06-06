@@ -1,4 +1,30 @@
+<style>
+  @media only screen and (min-width: 0px) {
+      .numspl:after {
+          display: none;
+      }
+  }
 
+  @media only screen and (min-width: 768px) {
+      .numspl:after {
+          content: 'Puntos';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .evalspl:after {
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .evalspl:after {
+          content: 'Valor a Evaluar';
+          display: block;
+      }
+  }
+
+  </style>
     <section class="content-header">
       <h1>
         Lineal Splines
@@ -12,21 +38,21 @@
     </section>
 
     <!-- Main content -->
-<div class="col-lg-6 col-xs-6">
+<div class="col-lg-offset-2 col-xs-offset-2 col-lg-8 col-xs-8">
 <div class="col-xs-offset-1 col-lg-offset-0">
   <div class="col-lg-10 col-xs-11 input-group margin-top">
-    <span class="input-group-addon numero" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="lispl" placeholder="Numero de puntos" aria-describedby="basic-addon1"></input>
+    <span class="input-group-addon numspl" id="basic-addon1"></span>
+    <input type="text" class="form-control" id="lispl" placeholder="(a,b,c)(d,e,f)(g,h,i)" aria-describedby="basic-addon1"></input>
 
 
   </div><br>
     <div class="col-lg-10 col-xs-11 input-group margin-top">
-    <span class="input-group-addon numero" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="evaluarspl" placeholder="Numero de puntos" aria-describedby="basic-addon1"></input>
+    <span class="input-group-addon evalspl" id="basic-addon1"></span>
+    <input type="text" class="form-control" id="evaluarspl" placeholder="X" aria-describedby="basic-addon1"></input>
 
 
   </div><br>
-  <button style="margin-left:5%" onclick="splinesl()">Ejecutar</button><br>
+<button type="button" class="btn btn-success calcular" style="margin-left:5%" onclick="splinesl()">Ejecutar</button><br>
 
   </div>
 <div class="splinesl"></div>

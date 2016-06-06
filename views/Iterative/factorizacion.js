@@ -2,7 +2,7 @@ function descriptionlu() {
   alert("The LU Factorization of a matrix is an important step on the solution of lineal equations, which normally consists on creating 2 matrixes (L & U) which satisfy the condition L * U = A, where is the one you should solve. L is a tringular Lower and U is a triangular Upper matrix.");
 }
 
-function lu() {
+function faclu() {
 
 var a00 = parseFloat(document.getElementById("A00").value);
 var a01 = parseFloat(document.getElementById("A01").value);

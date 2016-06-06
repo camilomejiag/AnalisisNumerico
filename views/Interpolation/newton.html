@@ -1,4 +1,30 @@
+<style>
+  @media only screen and (min-width: 0px) {
+      .numpun:after {
+          display: none;
+      }
+  }
 
+  @media only screen and (min-width: 768px) {
+      .numpun:after {
+          content: 'Puntos';
+          display: block;
+      }
+  }
+  @media only screen and (min-width: 0px) {
+      .evalnew:after {
+          display: none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      .evalnew:after {
+          content: 'Valor a Evaluar';
+          display: block;
+      }
+  }
+
+  </style>
     <section class="content-header">
       <h1>
         Newton
@@ -12,16 +38,18 @@
     </section>
 
     <!-- Main content -->
-    <div class="col-lg-6 col-xs-6">
+<div class="col-lg-offset-2 col-xs-offset-2 col-lg-8 col-xs-8">
 <div class="col-xs-offset-1 col-lg-offset-0">
   <div class="col-lg-10 col-xs-11 input-group margin-top">
-    <span class="input-group-addon numero" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="nw" placeholder="Numero de puntos" aria-describedby="basic-addon1"></input>
-    <span class="input-group-addon numero" id="basic-addon1"></span>
-    <input type="text" class="form-control" id="nw" placeholder="Numero de puntos" aria-describedby="basic-addon1"></input>
+    <span class="input-group-addon numpun" id="basic-addon1"></span>
+    <input type="text" class="form-control" id="nw" placeholder="(a,b,c)(d,e,f)(g,h,i)" aria-describedby="basic-addon1"></input>
+    </div><br>
+            <div class="col-lg-10 col-xs-11 input-group margin-top">
+    <span class="input-group-addon evalnew" id="basic-addon1"></span>
+    <input type="text" class="form-control" id="evaluar" placeholder="Valor a evaluar" aria-describedby="basic-addon1"></input>
 
   </div><br>
-  <button style="margin-left:5%" onclick="newton()">Ejecutar</button><br>
+<button type="button" class="btn btn-success calcular" style="margin-left:5%" onclick="newton()">Ejecutar</button><br>
 <div class="newton2"></div>
 
 
